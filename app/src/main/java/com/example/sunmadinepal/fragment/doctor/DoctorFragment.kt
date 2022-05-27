@@ -1,94 +1,96 @@
 package com.example.sunmadinepal.fragment.doctor
 
-import android.app.DatePickerDialog
-import android.app.TimePickerDialog
+import android.annotation.SuppressLint
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.view.*
-import android.widget.Toast
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sunmadinepal.R
 import com.example.sunmadinepal.ViewModel.DoctorAppointmentViewModel
-
 import com.example.sunmadinepal.databinding.FragmentProfileBinding
-import com.example.sunmadinepal.database.local.*
-import com.example.sunmadinepal.model.DoctorAppointment
-import java.util.*
+import com.example.sunmadinepal.fragment.doctor.activity.AddAppointmentActivity
+import com.example.sunmadinepal.fragment.doctor.activity.EditAppointmentActivity
+import com.example.sunmadinepal.fragment.doctor.adapter.AppointmentAdapter
+import com.example.sunmadinepal.fragment.doctor.model.AppointmentModel
+import com.example.sunmadinepal.fragment.doctor.viewmodel.AddDoctorAppointmentViewModel
+import com.example.sunmadinepal.utils.changeStatusBarColor
+import com.example.sunmadinepal.utils.changeStatusBarIconTextColor
+import com.example.sunmadinepal.utils.openActivity
+import com.google.android.material.button.MaterialButton
 
-class DoctorFragment : Fragment() {
+class DoctorFragment : Fragment(), AppointmentAdapter.OnDoctorAppointmentActionClicked {
 
-// Based on https://www.youtube.com/watch?v=UBCAWfztTrQ
 
-    private var _binding: FragmentProfileBinding ? = null
+    lateinit var binding: FragmentProfileBinding
     private lateinit var doctorAppointmentViewModel: DoctorAppointmentViewModel
+    lateinit var appointmentViewModel: AddDoctorAppointmentViewModel
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentProfileBinding.inflate(layoutInflater)
+        return binding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
         doctorAppointmentViewModel = ViewModelProvider(this).get(DoctorAppointmentViewModel::class.java)
+        appointmentViewModel = ViewModelProvider(this).get(AddDoctorAppointmentViewModel::class.java)
 
-        binding.addAppointment.setOnClickListener {
-            pickDateTime()
+        binding.addNewAppointmentButton.setOnClickListener {
+            requireActivity().openActivity(AddAppointmentActivity::class.java)
         }
 
-
-            binding.saveDate.setOnClickListener {
-                insertDataToDatabase()
+        appointmentViewModel.getAllAppointmentData.observe(viewLifecycleOwner, {appointList->
+            binding.appointmentRv.adapter = AppointmentAdapter(this).also {
+                if (appointList.isNotEmpty()) {
+                    binding.dontHaveAppointmentTv.visibility = View.GONE
+                    binding.noAppointmentImage.visibility = View.GONE
+                    it.submitList(appointList)
+                } else {
+                    binding.dontHaveAppointmentTv.visibility = View.VISIBLE
+                    binding.noAppointmentImage.visibility = View.VISIBLE
+                }
             }
-
-
-            //Based on https://www.youtube.com/watch?v=3USvr1Lz8g8&t=49s
-            val adapter = ListAdapter()
-            val recyclerView = binding.recyclerview1
-            recyclerView.adapter = adapter
-            recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
-            doctorAppointmentViewModel.readAllData.observe(viewLifecycleOwner, androidx.lifecycle.Observer {doctorAppointment -> adapter.setData(doctorAppointment) })
-
-
-        return root
+        })
     }
 
-
-
-    //pickDateTime() based on: https://stackoverflow.com/questions/38604157/android-date-time-picker-in-one-dialog
-    fun pickDateTime() {
-        val currentDateTime = Calendar.getInstance()
-        val startYear = currentDateTime.get(Calendar.YEAR)
-        val startMonth = currentDateTime.get(Calendar.MONTH)
-        val startDay = currentDateTime.get(Calendar.DAY_OF_MONTH)
-        val startHour = currentDateTime.get(Calendar.HOUR_OF_DAY)
-        val startMinute = currentDateTime.get(Calendar.MINUTE)
-        DatePickerDialog(requireContext(), R.style.DatePickerDialogTheme, DatePickerDialog.OnDateSetListener { _, year, month, day ->
-            TimePickerDialog(requireContext(), R.style.DatePickerDialogTheme, TimePickerDialog.OnTimeSetListener { _, hour, minute ->
-                val pickedDateTime = Calendar.getInstance()
-                pickedDateTime.set(year, month, day, hour, minute)
-                binding.dateBox.setText(""+timeFormat(hour)+":"+timeFormat(minute) +"    " +day +"/"+ (month+1) +"/"+ year)
-            }, startHour, startMinute, true).show()
-        }, startYear, startMonth, startDay).show()
+    @SuppressLint("InflateParams")
+    override fun onDoctorEditClicked(appointmentModel: AppointmentModel) {
+        requireActivity().openActivity(EditAppointmentActivity::class.java) {
+           putSerializable("appointmentModel",appointmentModel)
+        }
     }
 
-    fun timeFormat(number: Int): String? {
-        return if (number <= 9) "0$number" else number.toString()
+    override fun onDoctorDeleteClicked(appointmentModel: AppointmentModel) {
+
+        val view = layoutInflater.inflate(R.layout.delete_appointment_dialog, null)
+        val alertDialog = AlertDialog.Builder(requireContext()).create()
+        val deleteButton = view.findViewById<MaterialButton>(R.id.delete_button)
+        val cancelButton = view.findViewById<MaterialButton>(R.id.cancel_button)
+
+        deleteButton.setOnClickListener {
+            alertDialog.dismiss()
+            appointmentViewModel.deleteAppointmentViewModel(appointmentModel.id)
+        }
+        cancelButton.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.setView(view)
+        alertDialog.setCanceledOnTouchOutside(false)
+        alertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        alertDialog.show()
     }
-
-    private fun insertDataToDatabase() {
-        val dateToDatabase = binding.dateBox.text.toString()
-
-        val doctorAppointment = DoctorAppointment(0,dateToDatabase)
-
-        doctorAppointmentViewModel.addDoctorAppointment(doctorAppointment)
-        Toast.makeText(requireContext(),"Date saved", Toast.LENGTH_LONG).show()
-    }
-
-
 }
 
 

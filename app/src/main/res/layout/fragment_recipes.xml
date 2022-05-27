@@ -5,68 +5,273 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_vector"
+    android:background="@color/white"
     tools:context=".fragment.recipes.RecipesFragment">
 
-        <TextView
-            android:id="@+id/text_recipes"
+    <include
+        android:id="@+id/nutrition_tool_bar"
+        layout="@layout/custom_tool_layout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nutrition_tool_bar">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/recipe_energy_card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="570dp"
-            tools:ignore="MissingConstraints" />
-
-        <Button
-            android:id="@+id/recipes_for_pregnant_woman"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/background_box"
-            android:drawableLeft="@drawable/pregnant_woman"
-            android:text="@string/recipe_pregnant_woman"
-            android:textColor="@color/Orange"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:theme="@style/Button.White"
+            android:paddingVertical="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="#40E39F3E"
+            app:strokeWidth="0.5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/recipes_for_mothers"
-            android:layout_width="320dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="13dp">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="20dp"
+                    android:src="@drawable/ic_recipe_energy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/recipe_for_energy"
+                    android:textAlignment="center"
+                    android:textColor="@color/Orange"
+                    android:textSize="16sp"
+                    android:translationX="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/recipe_protection"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/background_box"
-            android:drawableLeft="@drawable/mum_with_baby"
-            android:text="@string/recipe_for_mothers"
-            android:textColor="@color/Orange"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:theme="@style/Button.White"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingVertical="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recipes_for_pregnant_woman" />
+            app:layout_constraintTop_toBottomOf="@+id/recipe_energy_card_view"
+            app:strokeColor="#40E39F3E"
+            app:strokeWidth="0.5dp">
 
-        <Button
-            android:id="@+id/recipes_for_children"
-            android:layout_width="320dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="13dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_recipe_protection"
+                    android:translationX="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/recipe_for_protection"
+                    android:textAlignment="center"
+                    android:textColor="@color/Orange"
+                    android:textSize="16sp"
+                    android:translationX="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/recipe_strength"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/background_box"
-            android:drawableLeft="@drawable/mum_with_kid"
-            android:text="@string/recipe_for_children"
-            android:textColor="@color/Orange"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:theme="@style/Button.White"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingVertical="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recipes_for_mothers" />
+            app:layout_constraintTop_toBottomOf="@+id/recipe_protection"
+            app:strokeColor="#40E39F3E"
+            app:strokeWidth="0.5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="13dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_recipe_strength"
+                    android:translationX="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/recipe_for_strength"
+                    android:textAlignment="center"
+                    android:textColor="@color/Orange"
+                    android:textSize="16sp"
+                    android:translationX="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/recipe_children"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingVertical="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_strength"
+            app:strokeColor="#40E39F3E"
+            app:strokeWidth="0.5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="13dp">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_recipe_children"
+                    android:translationX="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/recipes_for_children"
+                    android:textAlignment="center"
+                    android:textColor="@color/Orange"
+                    android:textSize="16sp"
+                    android:translationX="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+     <!--  <TextView
+           android:id="@+id/text_recipes"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textAlignment="center"
+           android:textSize="20sp"
+           tools:layout_editor_absoluteX="0dp"
+           tools:layout_editor_absoluteY="570dp"
+           tools:ignore="MissingConstraints" />
+
+       <Button
+           android:id="@+id/recipes_for_pregnant_woman"
+           android:layout_width="320dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="60dp"
+           android:background="@drawable/background_box"
+           android:drawableLeft="@drawable/pregnant_woman"
+           android:text="@string/recipe_pregnant_woman"
+           android:textColor="@color/Orange"
+           android:textSize="20sp"
+           android:textAlignment="center"
+           android:theme="@style/Button.White"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <Button
+           android:id="@+id/recipes_for_mothers"
+           android:layout_width="320dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="60dp"
+           android:background="@drawable/background_box"
+           android:drawableLeft="@drawable/mum_with_baby"
+           android:text="@string/recipe_for_mothers"
+           android:textColor="@color/Orange"
+           android:textSize="20sp"
+           android:textAlignment="center"
+           android:theme="@style/Button.White"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/recipes_for_pregnant_woman" />
+
+       <Button
+           android:id="@+id/recipes_for_children"
+           android:layout_width="320dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="60dp"
+           android:background="@drawable/background_box"
+           android:drawableLeft="@drawable/mum_with_kid"
+           android:text="@string/recipe_for_children"
+           android:textColor="@color/Orange"
+           android:textSize="20sp"
+           android:textAlignment="center"
+           android:theme="@style/Button.White"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/recipes_for_mothers" />
+-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

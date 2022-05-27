@@ -52,7 +52,7 @@ class GardenFragment : Fragment() {
 
     fun goToDestinations(){
 
-        binding.apply {
+       /* binding.apply {
 
             soil.setOnClickListener{
                 findNavController().navigate(R.id.action_navigation_garden_to_soilFragment)
@@ -66,7 +66,7 @@ class GardenFragment : Fragment() {
             grow.setOnClickListener {
                 findNavController().navigate(R.id.action_navigation_garden_to_growingFragment)
             }
-        }
+        }*/
     }
 
 }

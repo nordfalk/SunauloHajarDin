@@ -1,31 +1,35 @@
 package com.example.sunmadinepal.database.local
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sunmadinepal.R
+import com.example.sunmadinepal.databinding.FragmentDateListBinding
 import com.example.sunmadinepal.model.DoctorAppointment
 
-class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+class ListAdapter(): RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     private var doctorAppointmentList = emptyList<DoctorAppointment>()
 
-    class MyViewHolder(val view: View): RecyclerView.ViewHolder(view){
-
-    }
+    class MyViewHolder(val view: FragmentDateListBinding): RecyclerView.ViewHolder(view.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.fragment_date_list, parent, false)
-        return MyViewHolder(view)
+        return MyViewHolder(FragmentDateListBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = doctorAppointmentList[position]
-        holder.view.findViewById<TextView>(R.id.dateBox1).text = currentItem.date
+        holder.view.dateBox1.text = currentItem.date
+
+      /*  holder.view.apply {
+            delete.setOnClickListener {
+                itemClick.onDoctorEditClicked(currentItem)
+            }
+
+            edit.setOnClickListener {
+                itemClick.onDoctorDeleteClicked(currentItem)
+            }
+        }*/
     }
 
     override fun getItemCount(): Int {
@@ -36,5 +40,6 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         this.doctorAppointmentList = doctorAppointment
         notifyDataSetChanged()
     }
+
 
 }

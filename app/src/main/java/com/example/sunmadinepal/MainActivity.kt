@@ -7,6 +7,7 @@ import android.view.animation.Animation
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.RotateAnimation
 import android.widget.*
+import androidx.appcompat.app.AppCompatDelegate
 import java.util.*
 
 
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
     }
 
 
@@ -93,12 +95,6 @@ class MainActivity : AppCompatActivity() {
         image.startAnimation(rotateAnim)
 
     }
-
-
-
-
-
-
 }
 
 

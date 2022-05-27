@@ -1,17 +1,16 @@
 package com.example.sunmadinepal.fragment.health
 
-import android.content.res.Configuration
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.example.sunmadinepal.R
-import com.example.sunmadinepal.databinding.HealthBinding
-
 import com.example.sunmadinepal.ViewModel.HealthViewModel
+import com.example.sunmadinepal.databinding.HealthBinding
+import com.example.sunmadinepal.fragment.health.activity.GeneralHealthInfoActivity
 import com.example.sunmadinepal.model.setLocale
 import java.util.*
 
@@ -19,63 +18,85 @@ import java.util.*
 class HealthFragment : Fragment(){
 
     private lateinit var healthViewModel : HealthViewModel
-    private var _binding: HealthBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
+    lateinit var healthFragmentBinding: HealthBinding
+    val string = Locale.getDefault().language
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
-        healthViewModel =
-            ViewModelProvider(this).get(HealthViewModel::class.java)
+    ): View{
 
-        _binding = HealthBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        return root
+        healthFragmentBinding = HealthBinding.inflate(layoutInflater)
+        return healthFragmentBinding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-    val string = Locale.getDefault().getLanguage()
-    override fun onStart() {
-        super.onStart()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        healthViewModel = ViewModelProvider(this).get(HealthViewModel::class.java)
+
+        setLocale(requireContext(),string)
+
+        healthFragmentBinding.healthToolBar.toolbarActionTitle.text = getString(R.string.health)
         goToDestinations()
-        setLocale(this.requireContext(),string)
     }
 
-    fun goToDestinations(){
+    private fun goToDestinations(){
 
-        binding.apply {
+        healthFragmentBinding.apply {
 
             generalInformation.setOnClickListener{
-                findNavController().navigate(R.id.action_navigation_health_to_fragment_generalhealth)
+                val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
+                    putExtra("general_health", "general")
+                    putExtra("title_name","General Health Info")
+                }
+                startActivity(intent)
+
             }
             lady0to6.setOnClickListener {
-                findNavController().navigate(R.id.action_navigation_health_to_fragment_0_6_months)
+                val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
+                    putExtra("general_health", "lady_zero_six")
+                    putExtra("title_name","0-6 months")
+                }
+                startActivity(intent)
+
             }
             lady6to9.setOnClickListener {
-                findNavController().navigate(R.id.action_navigation_health_to_fragment_06_09_months)
+
+                val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
+                    putExtra("general_health", "lady_six_nine")
+                    putExtra("title_name","6-9 months")
+                }
+                startActivity(intent)
+
             }
             lady9to12.setOnClickListener {
-                findNavController().navigate(R.id.action_navigation_health_to_fragment_09_12_months)
+
+                val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
+                    putExtra("general_health", "lady_nine_twelve")
+                    putExtra("title_name","9-12 months")
+                }
+                startActivity(intent)
+
             }
             lady12to24.setOnClickListener {
-                findNavController().navigate(R.id.action_navigation_health_to_fragment_12_24_months)
+
+                val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
+                    putExtra("general_health", "twelve_twenty_four")
+                    putExtra("title_name", "12-24 months")
+                }
+                startActivity(intent)
+
             }
             maternity.setOnClickListener {
-                findNavController().navigate(R.id.action_navigation_health_to_fragment_maternity)
+                val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
+                    putExtra("general_health", "maternity")
+                    putExtra("title_name", "Pregnancy")
+
+                }
+                startActivity(intent)
             }
         }
-
     }
-
-
-
 }

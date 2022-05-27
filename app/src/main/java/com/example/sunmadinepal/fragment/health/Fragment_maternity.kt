@@ -80,7 +80,7 @@ class Fragment_maternity : Fragment() {
         }
         progressDialog =  ProgressDialog(this.context)
         // Setting up message in Progress dialog.
-        progressDialog!!.setMessage("Loading Data From Firebase.");
+        progressDialog!!.setMessage("Loading Data From Firebase load.");
         //Showing progress dialog.
         progressDialog!!.show()
 

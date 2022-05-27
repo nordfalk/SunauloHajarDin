@@ -38,6 +38,7 @@
             app:destination="@id/fragment_generalhealth" />
     </fragment>
 
+
     <fragment
         android:id="@+id/navigation_recipes"
         android:name="com.example.sunmadinepal.fragment.recipes.RecipesFragment"
@@ -54,7 +55,7 @@
             app:destination="@id/recipes_Mothers_Fragment" />
     </fragment>
 
-    <fragment
+   <!-- <fragment
         android:id="@id/navigation_garden"
         android:name="com.example.sunmadinepal.fragment.garden.GardenFragment"
         android:label="@string/title_garden"
@@ -72,7 +73,7 @@
         <action
             android:id="@+id/action_navigation_garden_to_growingFragment"
             app:destination="@id/growingFragment" />
-    </fragment>
+    </fragment>-->
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -176,7 +177,7 @@
             android:id="@+id/action_recipes_Mothers_Fragment_to_insideRecipes"
             app:destination="@id/insideRecipes" />
     </fragment>
-    <fragment
+   <!-- <fragment
         android:id="@+id/compostFragment"
         android:name="com.example.sunmadinepal.fragment.garden.CompostFragment"
         android:label="fragment_compost"
@@ -211,6 +212,16 @@
         <action
             android:id="@+id/action_growingFragment_to_navigation_garden"
             app:destination="@id/navigation_garden" />
-    </fragment>
+    </fragment>-->
+    <fragment
+        android:id="@+id/child_navigation"
+        android:name="com.example.sunmadinepal.fragment.child.ChildFragment"
+        android:label="Child"
+        tools:layout="@layout/fragment_child" />
+    <fragment
+        android:id="@+id/navigation_quiz"
+        android:name="com.example.sunmadinepal.fragment.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
 
 </navigation>

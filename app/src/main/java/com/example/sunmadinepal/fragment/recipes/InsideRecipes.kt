@@ -1,41 +1,41 @@
 package com.example.sunmadinepal.fragment.recipes
 
-import android.content.ContentValues.TAG
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
-import com.example.sunmadinepal.R
+import androidx.appcompat.app.AppCompatActivity
+import com.example.sunmadinepal.databinding.ActivityInsideRecipesBinding
 import com.example.sunmadinepal.model.loadImage
+import com.example.sunmadinepal.utils.changeStatusBarColor
+import com.example.sunmadinepal.utils.changeStatusBarIconTextColor
 import java.util.*
 
 
 class InsideRecipes : AppCompatActivity() {
-
+    private lateinit var insideRecipesBinding: ActivityInsideRecipesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_inside_recipes)
 
-        val string = Locale.getDefault().getLanguage()
+        changeStatusBarIconTextColor(true)
+        changeStatusBarColor()
+
+        insideRecipesBinding = ActivityInsideRecipesBinding.inflate(layoutInflater)
+        setContentView(insideRecipesBinding.root)
+
+        insideRecipesBinding.insideRecipeToolLayout.toolbarActionBackImageView.setOnClickListener {
+            finish()
+        }
+        val string = Locale.getDefault().language
         val locale = Locale(string)
         Locale.setDefault(locale)
 
-        val food_image: ImageView = findViewById(R.id.ivImage)
-        val food_description: TextView = findViewById(R.id.tvwelcome)
 
         val bundle: Bundle? = intent.extras
         if (bundle != null) {
 
             val titlel = bundle.getString("Title")
-            (this as AppCompatActivity).supportActionBar?.title = titlel
-            food_description.setText(bundle.getString("Description"))
-            loadImage(food_image, bundle.getString("Image1").toString())
-
-
+            insideRecipesBinding.insideRecipeToolLayout.toolbarActionTitle.text = titlel
+            insideRecipesBinding.description.text = bundle.getString("Description")
+            loadImage(insideRecipesBinding.ivImage, bundle.getString("Image1").toString())
         }
-
-
     }
 }
