@@ -23,9 +23,7 @@ class QuizFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         quizBinding.startQuizButton.setOnClickListener {
-            requireActivity().openActivity(StartQuizActivity::class.java).apply {
-                requireActivity().finish()
-            }
+            requireActivity().openActivity(StartQuizActivity::class.java)
         }
     }
 }

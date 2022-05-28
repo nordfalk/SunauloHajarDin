@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">G2_1000_golden_days</string>
-    <string name="title_activity_navigation">Navigation</string>
+    <string name="app_name">Sunaulo Hajar Din</string>
+    <string name="title_activity_navigation" translatable="false">Navigation</string>
     <string name="title_home">Home</string>
 
     <string name="title_Recipes">Nutrition</string>
+    <string name="nutrition">Nutrition</string>
     <string name="recipe_pregnant_woman">Recipes for pregnant woman</string>
     <string name="recipe_for_mothers">Recipes for mothers</string>
     <string name="recipe_for_children">Recipes for children</string>
@@ -80,7 +81,7 @@
     <string name="child">Child</string>
     <string name="your_don_t_have_any_appointments">Your don’t have any appointments</string>
     <string name="my_appointments">My Appointments</string>
-    <string name="add_new_appointment">Add new appointment</string>
+    <string name="add_new_appointment">Add new</string>
     <string name="select_a_child">Select a child</string>
     <string name="appointment_for">Appointment for</string>
     <string name="doctor_s_name">Doctor\'s Name</string>
@@ -151,5 +152,24 @@
     <string name="congratulations">Congratulations</string>
     <string name="submit">submit</string>
     <string name="skip">skip</string>
+    <string name="health_tip_1_title">Health tip one title.</string>
+    <string name="health_tip_1_desc">"Include food items for strength, such as potato, wheat, maiz, brown rice and ghee, in your daily meals.   These food items will ensure growth and proper development of the body.  See which foods that are body building foods "</string>
+    <string name="health_tip_2_title">Health tip two.</string>
+    <string name="health_tip_2_desc">When you eat leafy greens, cauliflower, bananas, lemons and pumpkin, you help the body fight diseases. Eat some of these protective food items every day.</string>
+    <string name="health_tip_3_title">Health tip three.</string>
+    <string name="health_tip_3_desc">You and your child need energy every day. Remember to include energy giving foods, such as soybean, chickpeas, fish and eggs, in your daily meals. Here are some more energy giving foods.</string>
+    <string name="health_tip_4_title">Health tip four.</string>
+    <string name="health_tip_4_desc">Always wash hands thoroughly with soap and water before cooking food and feeding your child. This will keep you and your child healthy, and prevent diseases, such as diarrhea and food poisoning. Read about 6 situations where it is important to wash hands with soap.</string>
+    <string name="health_tip_5_title">Health tip five.</string>
+    <string name="health_tip_5_desc">Do not feed your children food from the market, such as noodles, cookies and chips, on a daily basis. When you want to give your child a snack, try to give them fresh fruits or  beans instead.</string>
+    <string name="health_tip_6_title">Health tip six.</string>
+    <string name="health_tip_6_desc">Until your baby is 6 months old, breast milk contains all the nutrients and energy that your baby needs. There is no need to give water to your baby.See the many ways that you can breastfeed your baby.</string>
+
+    <string name="function">Function : </string>
+    <string name="ingredients">Ingredients :</string>
+    <string name="direction">Direction :</string>
+    <string name="read_more">Read More</string>
+    <string name="finish">FINISH</string>
+    <string name="go_to_next_question">GO TO NEXT QUESTION</string>
 
 </resources>

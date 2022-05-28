@@ -24,7 +24,7 @@ class Fragment_generalhealth : Fragment() {
     val string = Locale.getDefault().getLanguage()
     private var _events = ArrayList<RecipesData>()
     var progressDialog: ProgressDialog? = null // Creating Progress dialog
-    private lateinit var healthViewModel : HealthViewModel
+    private lateinit var healthViewModel: HealthViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,56 +46,6 @@ class Fragment_generalhealth : Fragment() {
     override fun onStart() {
         super.onStart()
         (activity as AppCompatActivity).supportActionBar?.title = "General health information"
-        getData()
+
     }
-
-    private fun getData() {
-
-        if (string.equals("en")){
-            healthViewModel.fetchEvent_GeneralHealth(
-                "GrowthMonitoringTitleEn","GrowthMonitoringDescriptionEn",
-                "HandwashingTitleEn", "HandwashingDescriptionEn",
-                "VitaminsTitleEn","VitaminsDescriptionEn",
-                "IronTitleEn","IronDescriptionEn",
-                "AnemiaTitleEn","AnemiaDescriptionEn",
-                "IronDeficiencyTitleEn","IronDeficiencyDescriptionEn",
-                "SickchildTitleEn","SickchildDescriptionEn",
-                "TDTitleEn","TDDescriptionEn",
-                "MalnutritionTitleEn","MalnutritionDescriptionEn")
-
-        }else if (string.equals("ne")){
-            healthViewModel.fetchEvent_GeneralHealth(
-                "GrowthMonitoringTitleNe","GrowthMonitoringDescriptionNe",
-                "HandwashingTitleNe", "HandwashingDescriptionNe",
-                "VitaminsTitleNe","VitaminsDescriptionNe",
-                "IronTitleNe","IronDescriptionNe",
-                "AnemiaTitleNe","AnemiaDescriptionNe",
-                "IronDeficiencyTitleNe","IronDeficiencyDescriptionNe",
-                "SickchildTitleNe","SickchildDescriptionNe",
-                "TDTitleNe","TDDescriptionNe",
-                "MalnutritionTitleNe","MalnutritionDescriptionNe")
-        }
-        progressDialog =  ProgressDialog(this.context)
-        // Setting up message in Progress dialog.
-        progressDialog!!.setMessage("Loading Data From Firebase.");
-        //Showing progress dialog.
-        progressDialog!!.show()
-
-        val recyclerview = binding.recyclerView
-        // this creates a vertical layout Manager
-        recyclerview.hasFixedSize()
-        recyclerview.layoutManager = LinearLayoutManager(activity)
-        val adapter = CustomAdapter(activity as AppCompatActivity,_events, null)
-        recyclerview.adapter = adapter
-
-
-        healthViewModel.events.observe(this, androidx.lifecycle.Observer {
-                event ->
-            _events.removeAll(_events)
-            _events.addAll(event)
-            progressDialog!!.dismiss()
-            recyclerview.adapter!!.notifyDataSetChanged()
-        })
-    }
-
 }

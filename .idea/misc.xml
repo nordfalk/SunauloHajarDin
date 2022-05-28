@@ -105,21 +105,24 @@
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/drawable/selected_option_border_bg.xml" value="0.33046875" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_add_appointment.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_add_child.xml" value="0.33" />
+        <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_daily_health_tips_detail.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_edit_appointment.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_edit_child.xml" value="0.28515625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_general_health_info.xml" value="0.25" />
+        <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_health_detail.xml" value="0.28515625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_inside_recipes.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_main.xml" value="0.20092592592592592" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_my_appointment.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_navigation.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_nine_twelve.xml" value="0.30625" />
+        <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_nutrition_food_items.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_pregnancy.xml" value="0.28515625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_receipe_for_energy.xml" value="0.5" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_recipe_for_protection.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_recipe_for_strength.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_result.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_six_nine_month.xml" value="0.30625" />
-        <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_start_quiz.xml" value="0.33" />
+        <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_start_quiz.xml" value="0.22" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_twleve_twenty_four.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/activity_zero_six_month.xml" value="0.28515625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/add_child_layout.xml" value="0.30625" />
@@ -132,17 +135,19 @@
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/fragment_child.xml" value="0.25" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/fragment_date_list.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/fragment_generalhealth.xml" value="0.30625" />
-        <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/fragment_home.xml" value="0.26081170991350633" />
+        <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/fragment_quiz.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/fragment_recipes.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/fragment_recipes_children.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/health.xml" value="0.25" />
+        <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/health_item_layout.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/home_doctor_next_appointment.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/my_children_item_layout.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/nutrition_item_layout.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/progress_dialog.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/recipedetails.xml" value="0.30625" />
+        <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/test.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/test_layout.xml" value="0.22" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/time_picker_dialog.xml" value="0.30625" />
         <entry key="..\:/Users/Lenovo/StudioProjects/G2_SundMadINepal/app/src/main/res/layout/tool_bar_layout.xml" value="0.33" />

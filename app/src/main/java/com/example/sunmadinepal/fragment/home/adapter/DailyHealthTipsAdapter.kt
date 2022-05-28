@@ -5,12 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.example.sunmadinepal.R
 import com.example.sunmadinepal.databinding.DailyHealthTipsItemLayoutBinding
 import com.example.sunmadinepal.fragment.home.model.DailyHealthTipsModel
 
-class DailyHealthTipsAdapter : ListAdapter<DailyHealthTipsModel, DailyHealthTipsAdapter.ViewHolder>(
-    diffUtil
-) {
+class DailyHealthTipsAdapter(private val readMoreClickListener: ReadMoreClickListener) :
+    ListAdapter<DailyHealthTipsModel, DailyHealthTipsAdapter.ViewHolder>(
+        diffUtil
+    ) {
 
     companion object {
         val diffUtil = object : DiffUtil.ItemCallback<DailyHealthTipsModel>() {
@@ -46,10 +50,20 @@ class DailyHealthTipsAdapter : ListAdapter<DailyHealthTipsModel, DailyHealthTips
     inner class ViewHolder(private val view: DailyHealthTipsItemLayoutBinding) :
         RecyclerView.ViewHolder(view.root) {
         fun updateView(dailyHealthTipsModel: DailyHealthTipsModel) {
-
-            view.healthyTipsTitle.text = dailyHealthTipsModel.title
+            Glide.with(view.root.context).load(dailyHealthTipsModel.imageDrawable).apply(
+                RequestOptions().error(R.drawable.ic_launcher_background)
+            ).into(view.imageView)
             view.healthyTipsDescription.text = dailyHealthTipsModel.description
-
+            view.dailyHealthTipsCard.setOnClickListener {
+                readMoreClickListener.onReadMoreClicked(
+                    dailyHealthTipsModel,
+                    bindingAdapterPosition
+                )
+            }
         }
+    }
+
+    interface ReadMoreClickListener {
+        fun onReadMoreClicked(dailyHealthTipsModel: DailyHealthTipsModel, position: Int)
     }
 }

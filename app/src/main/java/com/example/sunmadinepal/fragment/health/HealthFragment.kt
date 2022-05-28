@@ -49,7 +49,7 @@ class HealthFragment : Fragment(){
             generalInformation.setOnClickListener{
                 val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
                     putExtra("general_health", "general")
-                    putExtra("title_name","General Health Info")
+                    putExtra("title_name",getString(R.string.general_health_info))
                 }
                 startActivity(intent)
 
@@ -57,7 +57,7 @@ class HealthFragment : Fragment(){
             lady0to6.setOnClickListener {
                 val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
                     putExtra("general_health", "lady_zero_six")
-                    putExtra("title_name","0-6 months")
+                    putExtra("title_name",getString(R.string.months_0to6))
                 }
                 startActivity(intent)
 
@@ -66,7 +66,7 @@ class HealthFragment : Fragment(){
 
                 val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
                     putExtra("general_health", "lady_six_nine")
-                    putExtra("title_name","6-9 months")
+                    putExtra("title_name",getString(R.string.months_6to9))
                 }
                 startActivity(intent)
 
@@ -75,7 +75,7 @@ class HealthFragment : Fragment(){
 
                 val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
                     putExtra("general_health", "lady_nine_twelve")
-                    putExtra("title_name","9-12 months")
+                    putExtra("title_name",getString(R.string.months_9to12))
                 }
                 startActivity(intent)
 
@@ -84,7 +84,7 @@ class HealthFragment : Fragment(){
 
                 val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
                     putExtra("general_health", "twelve_twenty_four")
-                    putExtra("title_name", "12-24 months")
+                    putExtra("title_name", getString(R.string.months_12to24))
                 }
                 startActivity(intent)
 
@@ -92,7 +92,7 @@ class HealthFragment : Fragment(){
             maternity.setOnClickListener {
                 val intent = Intent(requireContext(),GeneralHealthInfoActivity::class.java).apply {
                     putExtra("general_health", "maternity")
-                    putExtra("title_name", "Pregnancy")
+                    putExtra("title_name",getString(R.string.Pregnancy))
 
                 }
                 startActivity(intent)

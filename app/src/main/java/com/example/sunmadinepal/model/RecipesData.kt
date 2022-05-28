@@ -3,13 +3,15 @@ package com.example.sunmadinepal.model
 import android.widget.TextView
 import com.example.sunmadinepal.R
 import java.io.File
+import java.io.Serializable
 
 data class RecipesData(
     var itemImage: String,
     var itemName: String,
     var itemDescription: String,
+    var itemDirection : String
 
-    ) {
+    ) : Serializable {
 
     @JvmName("getItemName1")
     public fun getItemName(): String {
@@ -42,6 +44,9 @@ data class RecipesData(
     }
 
 
-
+    @JvmName("itemDirection")
+    fun getItemDirection(): String {
+        return itemDirection
+    }
 
 }

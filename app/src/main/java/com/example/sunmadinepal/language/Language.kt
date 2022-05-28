@@ -13,5 +13,4 @@ fun setLocale(c:Context,code: String) {
     config.locale = locale
     c.getApplicationContext().resources.updateConfiguration(config, null)
 
-
 }

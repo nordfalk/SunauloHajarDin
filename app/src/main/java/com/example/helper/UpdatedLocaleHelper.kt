@@ -1,16 +1,17 @@
 package com.example.helper
 
 import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import android.content.res.Configuration
 import android.os.Build
-import android.preference.PreferenceManager
 import java.util.*
 
 @Suppress("DEPRECATION")
 class UpdatedLocaleHelper {
 
     companion object {
-        private const val SELECTED_LANGUAGE = "Language.Helper.Selected.Language"
+        private const val PREF_NAME = "language"
+        private const val SELECTED_LANGUAGE = "selected_language"
 
         // persists new language code change in preference manager and updates application default locale
         // returns Context having application default locale
@@ -31,8 +32,8 @@ class UpdatedLocaleHelper {
         }
 
         // persists new language code in preference manager
-        private fun persist(context: Context, language: String?) {
-            val preferences = PreferenceManager.getDefaultSharedPreferences(context)
+        private fun persist(context: Context, language: String) {
+            val preferences = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE)
             val editor = preferences.edit()
             editor.putString(SELECTED_LANGUAGE, language)
             editor.apply()
@@ -40,10 +41,14 @@ class UpdatedLocaleHelper {
 
         private fun getLocale(splitLocaleCode: String) =
             if (splitLocaleCode.contains("_")) {
-                val arg = splitLocaleCode.split("_".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+                val arg = splitLocaleCode.split("_".toRegex()).dropLastWhile { it.isEmpty() }
+                    .toTypedArray()
                 Locale(arg[0], arg[1])
             } else {
                 Locale(splitLocaleCode)
             }
+
+        fun getCurrentLang(context: Context): String? =
+            context.getSharedPreferences(PREF_NAME, MODE_PRIVATE).getString(SELECTED_LANGUAGE, null)
     }
 }

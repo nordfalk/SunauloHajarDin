@@ -5,7 +5,8 @@
     <string name="tomato">टमाटर</string>
     <string name="health">स्वास्थ</string>
 
-    <string name="title_home">घर</string>
+    <string name="title_home">गृह</string>
+    <string name="nutrition">पोषण</string>
 
     <string name="title_Recipes">व्यञ्जनहरु</string>
     <string name="recipe_pregnant_woman">गर्भवती महिला को लागि व्यञ्जनहरु</string>
@@ -78,7 +79,7 @@
     <string name="general_health_ninfo">सामान्य स्वास्थ्य जानकारी</string>
     <string name="my_appointments">नियुक्ति</string>
     <string name="your_don_t_have_any_appointments">तपाईंको कुनै नियुक्ति छैनन्</string>
-    <string name="add_new_appointment">नयाँ नियुक्ति थप्नुहोस्</string>
+    <string name="add_new_appointment">नयाँ थप्नुहोस्</string>
     <string name="appointment_for">नियुक्ति</string>
     <string name="select_a_child">बच्चा थप्नुहोस्</string>
     <string name="doctor_s_name">डाक्टरको नाम</string>
@@ -121,5 +122,28 @@
     <string name="start_quiz">प्रश्नोत्तरी सुरु गर्नुहोस्</string>
     <string name="submit">पेश गर्नुहोस्</string>
     <string name="skip">छोड्नुहोस्</string>
+    <string name="health_tip_1_title">Health tip one title.</string>
+    <string name="health_tip_1_desc">बलियो बन्नको लागि दैनिक यी खाना  खानु  जरुरी  छ जस्तैः आलु, गहुँ, मकै, मार्सी चामल  (  नफलेको चामल ) र घीउ  ।                                  यी खानेकुराले शरीरको वृद्धि र पुर्ण रूपमा बिकास गर्दछ। शरीर बनाउने खानेकुराहरु हेर</string>
+    <string name="health_tip_2_title">Health tip two.</string>
+    <string name="health_tip_2_desc">हरियो सागपात, काउली , केरा , कागती र फर्सी  खानाले रोग संग लड्न सक्ने क्षमता बढाउछ।  दैनिक यि मध्यक सुरक्षात्तमक खाना खानु पर्दछ</string>
+    <string name="health_tip_3_title">Health tip three.</string>
+    <string name="health_tip_3_desc">आमा र बच्चालाई दैनिक शक्तिको आवश्यकता  पर्दछ। त्येसैले दिनहुँ शक्ति दिने खाना खानु पर्दछ  जस्तै: भटमास, चना, माछा र अन्डा । केहि  शक्ति दिने खाना यसप्रकार छन् ।</string>
+    <string name="health_tip_4_title">Health tip four.</string>
+    <string name="health_tip_4_desc">खाना पकाउनु र बच्चा लाई खुवाउनु अधि सधैं सफा पानी र साबुनले हात धुनु पर्छ। यसोगर्नले आमा र बच्चा स्वास्थ र रोग मुक्त हुन्छन् ।जस्तैः झाडापखाला र बान्ता हुने। साबुनपानीले हात धुनु पर्न आवश्यक ६ अवस्था हरु पढ्नुहोस।</string>
+    <string name="health_tip_5_title">Health tip five.</string>
+    <string name="health_tip_5_desc">दैनिक रुपमा बच्चाहरूलाई बजारको खानेकुरा खुवाउनु हुँदैन जस्तैः चाउचाउ , बिस्कुट र चिप्स आदि। बच्चाहरुलाइ खाजा दिने बेलामा ताजा फलफूल तथा गेडागुडी दिनु पर्छ।</string>
+    <string name="health_tip_6_title">Health tip six.</string>
+    <string name="health_tip_6_desc">६ महीना सम्म बच्चालाई आमाको दुध खुवाउदा बच्चालाई चहिने पोषण र शक्ति प्राप्त गर्दछ। त्यतिबेलासम्म बच्चालाई पानी दिनु जरुरी  छैन। स्तनपानका विभिन्न आसनहरु  हेर्नुहोस।</string>
+    <string name="function">कार्य : </string>
+    <string name="recipe_for_energy">ऊर्जा दिने खाना</string>
+    <string name="recipe_for_protection">सुरक्षात्मक खाना</string>
+    <string name="recipe_for_strength">शरीर निर्माण खाना (शक्ति)</string>
+    <string name="recipes_for_children">बच्चाहरु को लागि व्यञ्जनहरु</string>
+    <string name="ingredients">सामग्री :</string>
+    <string name="direction">बनाउने तरीका :</string>
+    <string name="read_more">थप पढ्नुहोस्</string>
+    <string name="quiz">प्रश्नोत्तरी</string>
+    <string name="finish">समाप्त गर्नुहोस्</string>
+    <string name="go_to_next_question">अर्को प्रश्नमा जानुहोस्</string>
 
 </resources>

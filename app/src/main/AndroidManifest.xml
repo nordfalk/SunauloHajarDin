@@ -13,19 +13,22 @@
         android:theme="@style/Theme.Sunmadinepal"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".fragment.home.DailyHealthTipsDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.health.activity.HealthDetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".fragment.quiz.ResultActivity"
             android:exported="true" />
         <activity
             android:name=".fragment.quiz.StartQuizActivity"
             android:exported="true" />
         <activity
-            android:name=".fragment.nutrition.activity.RecipeForStrength"
-            android:exported="true" />
-        <activity
-            android:name=".fragment.nutrition.activity.RecipeForProtectionActivity"
-            android:exported="true" />
-        <activity
             android:name=".fragment.nutrition.activity.RecipeForEnergyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.nutrition.activity.NutritionFoodItemsActivity"
             android:exported="true" />
         <activity
             android:name=".fragment.child.activity.EditChildActivity"

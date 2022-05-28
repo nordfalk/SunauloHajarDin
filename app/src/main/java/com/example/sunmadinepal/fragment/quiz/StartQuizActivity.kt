@@ -5,12 +5,19 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.sunmadinepal.R
 import com.example.sunmadinepal.databinding.ActivityStartQuizBinding
+import com.example.sunmadinepal.utils.changeStatusBarColor
+import com.example.sunmadinepal.utils.changeStatusBarIconTextColor
+import java.util.*
+import kotlin.collections.ArrayList
 
 class StartQuizActivity : AppCompatActivity() , View.OnClickListener {
     lateinit var activityStartQuizBinding: ActivityStartQuizBinding
@@ -18,6 +25,7 @@ class StartQuizActivity : AppCompatActivity() , View.OnClickListener {
     private var questionList: MutableList<Question> = mutableListOf()
     private var selectedOptionPosition: Int = 0
     private var correctAnswer: Int = 0
+    val string = Locale.getDefault().language
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,18 +33,24 @@ class StartQuizActivity : AppCompatActivity() , View.OnClickListener {
         activityStartQuizBinding = ActivityStartQuizBinding.inflate(layoutInflater)
         setContentView(activityStartQuizBinding.root)
 
-        activityStartQuizBinding.startQuizToolBar.toolbarActionTitle.text = getString(R.string.title_Recipes)
+        activityStartQuizBinding.startQuizToolBar.toolbarActionTitle.text = getString(R.string.nutrition)
         questionList = Constants.getQuestions(this)
 
-        setQuestion()
         activityStartQuizBinding.yesTv.setOnClickListener(this)
         activityStartQuizBinding.noTv.setOnClickListener(this)
         activityStartQuizBinding.thirdQuestion.setOnClickListener(this)
         activityStartQuizBinding.submitButton.setOnClickListener(this)
 
         activityStartQuizBinding.skipTv.setOnClickListener {
-            finish()
+           finishAndRemoveTask()
         }
+
+        changeStatusBarIconTextColor(true)
+        changeStatusBarColor()
+
+        activityStartQuizBinding.progressBar.max = questionList.size
+        setQuestion()
+        updateImage()
     }
 
     private fun selectedOptionView(tv: TextView, selectedOptionNum: Int){
@@ -57,10 +71,10 @@ class StartQuizActivity : AppCompatActivity() , View.OnClickListener {
         defaultOptionsView()
 
         if(currentPosition == questionList.size){
-            activityStartQuizBinding.submitButton.text = "FINISH"
+            activityStartQuizBinding.submitButton.text = getString(R.string.finish)
         }
         else{
-            activityStartQuizBinding.submitButton.text = "SUBMIT"
+            activityStartQuizBinding.submitButton.text = getString(R.string.submit)
         }
 
         activityStartQuizBinding.progressBar.progress = currentPosition
@@ -168,15 +182,27 @@ class StartQuizActivity : AppCompatActivity() , View.OnClickListener {
                     answerView(question.correctAnswer,R.drawable.correct_option_border_bg)
 
                     if(currentPosition == questionList.size){
-                        activityStartQuizBinding.submitButton.text = "FINISH"
+                        activityStartQuizBinding.submitButton.text = getString(R.string.finish)
                     }
                     else{
-                        activityStartQuizBinding.submitButton.text = "GO TO NEXT QUESTION"
+                        activityStartQuizBinding.submitButton.text = getString(R.string.go_to_next_question)
                     }
-
                     selectedOptionPosition = 0
                 }
+                updateImage()
             }
         }
+    }
+
+    private fun updateImage(){
+        Log.d("curreponsot ", currentPosition.toString())
+        try {
+            Glide.with(this).load(questionList[currentPosition-1].questionImage).apply(
+                RequestOptions().error(R.drawable.ic_launcher_background)
+            ).into(activityStartQuizBinding.questionRelatedImageView)
+        }catch (e:Exception){
+
+        }
+
     }
 }

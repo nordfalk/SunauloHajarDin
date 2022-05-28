@@ -1,13 +1,14 @@
 package com.example.sunmadinepal
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.RotateAnimation
-import android.widget.*
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import com.example.helper.UpdatedLocaleHelper
 import java.util.*
 
 
@@ -16,6 +17,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val prefLang = UpdatedLocaleHelper.getCurrentLang(this)
+        if (prefLang != null) {
+            UpdatedLocaleHelper.setLanguage(this, prefLang)
+        } else {
+            UpdatedLocaleHelper.setLanguage(this, "ne")
+        }
         setContentView(R.layout.activity_main)
 
         LogoStart()
@@ -25,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
     }
-
 
 
     private fun LogoStart() {
@@ -55,7 +61,7 @@ class MainActivity : AppCompatActivity() {
     private fun rotatLogo() {
 
         var degree = 0
-        var degreeOld= 0
+        var degreeOld = 0
 
         val RANDOM = Random()
 
@@ -70,7 +76,7 @@ class MainActivity : AppCompatActivity() {
             RotateAnimation.RELATIVE_TO_SELF, 0.5f, RotateAnimation.RELATIVE_TO_SELF, 0.5f
         )
         rotateAnim.duration = 2600
-        rotateAnim.repeatCount =2
+        rotateAnim.repeatCount = 2
         rotateAnim.fillAfter = true
         rotateAnim.interpolator = DecelerateInterpolator()
         rotateAnim.setAnimationListener(object : Animation.AnimationListener {

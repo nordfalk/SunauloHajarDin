@@ -1,8 +1,8 @@
 package com.example.sunmadinepal.fragment.home.model
 
-data class DailyHealthTipsModel(
+import android.graphics.drawable.Drawable
 
-    val title: String,
+data class DailyHealthTipsModel(
     val description: String,
-    val readMore: String
+    val imageDrawable: Drawable?
 )

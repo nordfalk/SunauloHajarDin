@@ -8,6 +8,8 @@ import com.example.sunmadinepal.ViewModel.RecipesViewModel
 import com.example.sunmadinepal.databinding.ActivityReceipeForEnergyBinding
 import com.example.sunmadinepal.fragment.nutrition.adapter.NutritionAdapter
 import com.example.sunmadinepal.model.RecipesData
+import com.example.sunmadinepal.utils.changeStatusBarColor
+import com.example.sunmadinepal.utils.changeStatusBarIconTextColor
 import com.example.sunmadinepal.utils.hideProgressDialog
 import com.example.sunmadinepal.utils.showProgressDialog
 import java.util.*
@@ -22,6 +24,9 @@ class RecipeForEnergyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         activityReceipeForEnergyBinding = ActivityReceipeForEnergyBinding.inflate(layoutInflater)
         setContentView(activityReceipeForEnergyBinding.root)
+
+        changeStatusBarIconTextColor(true)
+        changeStatusBarColor()
 
         val receiveIntent = intent.getStringExtra("tool_bar_title")
         activityReceipeForEnergyBinding.recipeEnergyToolBar.toolbarActionTitle.text = receiveIntent
@@ -39,16 +44,19 @@ class RecipeForEnergyActivity : AppCompatActivity() {
     private fun getData() {
         if (string.equals("en")){
             recipesViewModel.fetchEventRecipesForChildren(
-                "JauloTitleEn","JauloDescriptionEn",
-                "LittoTitleEn", "LittoDescriptionEn",
+                "JauloTitleEn","jauloIngrdientsEN", "jauloItemDirectionEN",
+                "LittoTitleEn", "LittoDescriptionEn","litoItemDirectionEN",
                 "NutritiousFlourTitleEn","NutritiousFlourDescriptionEn",
-                "PumpkinPuddingTitleEn", "PumpkinPuddingDescriptionEn")
+                    "PumpkinPuddingTitleEn", "PumpkinPuddingDescriptionEn",
+            "PumpkinPuddingDirectionEn")
         }else if (string.equals("ne")){
             recipesViewModel.fetchEventRecipesForChildren(
-                "JauloTitleNe","JauloDescriptionNe",
-                "LittoTitleNe","LittoDescriptionNe",
+//
+                "JauloTitleNe","jauloIngredientsNP","jauloItemDirectionNP",
+                "LittoTitleNe","LittoDescriptionNe","litoItemDirectionNP",
                 "NutritiousFlourTitleNe","NutritiousFlourDescriptionNe",
-                "PumpkinPuddingTitleNe", "PumpkinPuddingDescriptionNe")
+                "PumpkinPuddingTitleNe", "PumpkinPuddingDescriptionNe",
+            "PumpkinPuddingDirectionNp")
         }
 
         showProgressDialog()

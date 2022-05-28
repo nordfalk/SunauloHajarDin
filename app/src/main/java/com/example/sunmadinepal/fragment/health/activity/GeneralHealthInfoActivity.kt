@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.sunmadinepal.ViewModel.HealthViewModel
-import com.example.sunmadinepal.database.adapter.CustomAdapter
 import com.example.sunmadinepal.databinding.ActivityGeneralHealthInfoBinding
 import com.example.sunmadinepal.model.RecipesData
 import com.example.sunmadinepal.utils.changeStatusBarColor
@@ -46,26 +45,26 @@ class GeneralHealthInfoActivity : AppCompatActivity() {
                     healthViewModel.fetchEvent_GeneralHealth(
                         "GrowthMonitoringTitleEn", "GrowthMonitoringDescriptionEn",
                         "HandwashingTitleEn", "HandwashingDescriptionEn",
+                        "HealthingEatingHabitsTitleEN", "HealthingEatingHabitsDescriptionEN",
+                        "MalnutritionTitleEn", "MalnutritionDescriptionEn",
                         "VitaminsTitleEn", "VitaminsDescriptionEn",
                         "IronTitleEn", "IronDescriptionEn",
                         "AnemiaTitleEn", "AnemiaDescriptionEn",
-                        "IronDeficiencyTitleEn", "IronDeficiencyDescriptionEn",
-                        "SickchildTitleEn", "SickchildDescriptionEn",
                         "TDTitleEn", "TDDescriptionEn",
-                        "MalnutritionTitleEn", "MalnutritionDescriptionEn"
+                        "SickchildTitleEn", "SickchildDescriptionEn"
                     )
 
                 } else if (string.equals("ne")) {
                     healthViewModel.fetchEvent_GeneralHealth(
                         "GrowthMonitoringTitleNe", "GrowthMonitoringDescriptionNe",
                         "HandwashingTitleNe", "HandwashingDescriptionNe",
+                        "HealthingEatingHabitsTitleNP", "HealthingEatingHabitsDescriptionNP",
+                        "MalnutritionTitleNe", "MalnutritionDescriptionNe",
                         "VitaminsTitleNe", "VitaminsDescriptionNe",
                         "IronTitleNe", "IronDescriptionNe",
                         "AnemiaTitleNe", "AnemiaDescriptionNe",
-                        "IronDeficiencyTitleNe", "IronDeficiencyDescriptionNe",
-                        "SickchildTitleNe", "SickchildDescriptionNe",
                         "TDTitleNe", "TDDescriptionNe",
-                        "MalnutritionTitleNe", "MalnutritionDescriptionNe"
+                        "SickchildTitleNe", "SickchildDescriptionNe"
                     )
                 }
             }
@@ -73,15 +72,15 @@ class GeneralHealthInfoActivity : AppCompatActivity() {
             "lady_zero_six"->{
                 if (string.equals("en")){
                     healthViewModel.fetchEvent_0_6_Months(
-                        "0to6MonthsBreastfeedingTitleEn","0to6MonthsBreastfeedingDescriptionEn",
                         "0to6MonthsExaminationTitleEn","0to6MonthsExaminationDescriptionEn",
+                        "0to6MonthsBreastfeedingTitleEn","0to6MonthsBreastfeedingDescriptionEn",
                         "0to6MonthsVitaminsTitleEn","0to6MonthsVitaminsDescriptionEn")
 
 
                 }else if (string.equals("ne")){
                     healthViewModel.fetchEvent_0_6_Months(
-                        "0to6MonthsBreastfeedingTitleNe","0to6MonthsBreastfeedingDescriptionNe",
                         "0to6MonthsExaminationTitleNe","0to6MonthsExaminationDescriptionNe",
+                        "0to6MonthsBreastfeedingTitleNe","0to6MonthsBreastfeedingDescriptionNe",
                         "0to6MonthsVitaminsTitleNe","0to6MonthsVitaminsDescriptionNe")
                 }
             }
@@ -103,17 +102,13 @@ class GeneralHealthInfoActivity : AppCompatActivity() {
 
             "lady_nine_twelve"->{
                 if (string.equals("en")) {
-                    healthViewModel.fetchEvent_09_12_Months(
-                        "9to12MonthsHealthyEatingTitleEn", "9to12MonthsHealthyEatingDescriptionEn",
-                        "9to12MonthsFeedingTitleEn", "9to12MonthsFeedingDescriptionEn",
-                        "9to12MonthsWaterTitleEn", "9to12MonthsWaterDescriptionEn"
+                    healthViewModel.fetchEvent_09_12_MonthsHealt(
+                        "9to12MonthsHealthTitleEn", "9to12MonthsHealthDescriptionEn"
                     )
 
                 } else if (string.equals("ne")) {
-                    healthViewModel.fetchEvent_09_12_Months(
-                        "9to12MonthsHealthyEatingTitleNe", "9to12MonthsHealthyEatingDescriptionNe",
-                        "9to12MonthsFeedingTitleNe", "9to12MonthsFeedingDescriptionNe",
-                        "9to12MonthsWaterTitleNe", "9to12MonthsWaterDescriptionNe"
+                    healthViewModel.fetchEvent_09_12_MonthsHealt(
+                        "9to12MonthsHealthTitleNe", "9to12MonthsHealthDescriptionNe"
                     )
                 }
             }
@@ -152,7 +147,7 @@ class GeneralHealthInfoActivity : AppCompatActivity() {
 
         showProgressDialog()
 
-        activityGeneralHealthInfoBinding.recyclerView.adapter = CustomAdapter(this, _events, null)
+        activityGeneralHealthInfoBinding.recyclerView.adapter = HealthAdapter(this, _events, null)
 
         healthViewModel.events.observe(this, { event ->
             _events.removeAll(_events)

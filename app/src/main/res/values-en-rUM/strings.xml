@@ -73,4 +73,18 @@
     <string name="Compost_Step3">Put layer by layer elements in the pit, firstly, put Bushes with leaves then cow dung, then Urine and ash. repeat until the pit is full</string>
     <string name="Compost_Step4">Put a stick that reaches the bottom of the pit and cover it with Soil</string>
     <string name="Compost_Step5">Your compost Pit will be ready in 30 to 35 days</string>
+    <string name="health_tip_1_title">Health tip one title.</string>
+    <string name="health_tip_1_desc">"Include food items for strength, such as potato, wheat, maiz, brown rice and ghee, in your daily meals.   These food items will ensure growth and proper development of the body.  See which foods that are body building foods "</string>
+    <string name="health_tip_2_title">Health tip two.</string>
+    <string name="health_tip_2_desc">When you eat leafy greens, cauliflower, bananas, lemons and pumpkin, you help the body fight diseases. Eat some of these protective food items every day.</string>
+    <string name="health_tip_3_title">Health tip three.</string>
+    <string name="health_tip_3_desc">You and your child need energy every day. Remember to include energy giving foods, such as soybean, chickpeas, fish and eggs, in your daily meals. Here are some more energy giving foods
+.</string>
+    <string name="health_tip_4_title">Health tip four.</string>
+    <string name="health_tip_4_desc">Always wash hands thoroughly with soap and water before cooking food and feeding your child. This will keep you and your child healthy, and prevent diseases, such as diarrhea and food poisoning. Read about 6 situations where it is important to wash hands with soap
+.</string>
+    <string name="health_tip_5_title">Health tip five.</string>
+    <string name="health_tip_5_desc">Do not feed your children food from the market, such as noodles, cookies and chips, on a daily basis. When you want to give your child a snack, try to give them fresh fruits or  beans instead.</string>
+    <string name="health_tip_6_title">Health tip six.</string>
+    <string name="health_tip_6_desc">Until your baby is 6 months old, breast milk contains all the nutrients and energy that your baby needs. There is no need to give water to your baby.See the many ways that you can breastfeed your baby.</string>
 </resources>

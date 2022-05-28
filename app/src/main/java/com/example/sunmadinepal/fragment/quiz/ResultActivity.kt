@@ -3,6 +3,8 @@ package com.example.sunmadinepal.fragment.quiz
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sunmadinepal.databinding.ActivityResultBinding
+import com.example.sunmadinepal.utils.changeStatusBarColor
+import com.example.sunmadinepal.utils.changeStatusBarIconTextColor
 
 class ResultActivity : AppCompatActivity() {
 
@@ -12,6 +14,8 @@ class ResultActivity : AppCompatActivity() {
         activityResultBinding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(activityResultBinding.root)
 
+        changeStatusBarIconTextColor(true)
+        changeStatusBarColor()
 
         val totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS,0)
         val totalCorrectQuestions = intent.getIntExtra(Constants.CORRECT_QUESTIONS,0)
@@ -26,6 +30,7 @@ class ResultActivity : AppCompatActivity() {
             gotButton.setOnClickListener {
                 finish()
             }
+
         }
 
     }

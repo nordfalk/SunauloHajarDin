@@ -1,6 +1,7 @@
 package com.example.sunmadinepal.fragment.recipes
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sunmadinepal.databinding.ActivityInsideRecipesBinding
 import com.example.sunmadinepal.model.loadImage
@@ -35,6 +36,14 @@ class InsideRecipes : AppCompatActivity() {
             val titlel = bundle.getString("Title")
             insideRecipesBinding.insideRecipeToolLayout.toolbarActionTitle.text = titlel
             insideRecipesBinding.description.text = bundle.getString("Description")
+            if (bundle.getString("direction").isNullOrEmpty()){
+                insideRecipesBinding.direction.visibility  =View.GONE
+
+            }else{
+                insideRecipesBinding.direction.visibility  =View.VISIBLE
+                insideRecipesBinding.directionTv.text = bundle.getString("direction")
+
+            }
             loadImage(insideRecipesBinding.ivImage, bundle.getString("Image1").toString())
         }
     }

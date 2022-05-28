@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.sunmadinepal.R
 import com.example.sunmadinepal.databinding.FragmentRecipesBinding
+import com.example.sunmadinepal.fragment.nutrition.activity.NutritionFoodItemsActivity
 import com.example.sunmadinepal.fragment.nutrition.activity.RecipeForEnergyActivity
 import com.example.sunmadinepal.model.setLocale
 import java.util.*
@@ -31,7 +32,7 @@ class RecipesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _binding.nutritionToolBar.toolbarActionTitle.text = getString(R.string.title_Recipes)
+        _binding.nutritionToolBar.toolbarActionTitle.text = getString(R.string.nutrition)
         goToDestinations()
         setLocale(this.requireContext(), string)
     }
@@ -40,24 +41,35 @@ class RecipesFragment : Fragment() {
     private fun goToDestinations() {
 
         _binding.apply {
-            recipeEnergyCardView.setOnClickListener {
+            recipeChildren.setOnClickListener {
 
                 val intent = Intent(requireContext(), RecipeForEnergyActivity::class.java).apply {
-                    putExtra("tool_bar_title", getString(R.string.recipe_for_energy))
+                    putExtra("tool_bar_title", getString(R.string.recipe_for_children))
                 }
                 startActivity(intent)
 
             }
 
-            /* recipesForPregnantWoman.setOnClickListener {
-                 findNavController().navigate(R.id.action_navigation_recipes_to_recipes_Pregnant_Woman_Fragment) }
+            recipeEnergyCardView.setOnClickListener {
+                val intent = Intent(requireContext(), NutritionFoodItemsActivity::class.java).apply {
+                    putExtra("tool_bar_title", getString(R.string.recipe_for_energy))
+                }
+                startActivity(intent)
+            }
 
-             recipesForMothers.setOnClickListener{
-                 findNavController().navigate(R.id.action_navigation_recipes_to_recipes_Mothers_Fragment)
-             }
-             recipesForChildren.setOnClickListener{
-                 findNavController().navigate(R.id.action_navigation_recipes_to_recipes_Children_Fragment)
-             }*/
+            recipeProtection.setOnClickListener {
+                val intent = Intent(requireContext(), NutritionFoodItemsActivity::class.java).apply {
+                    putExtra("tool_bar_title", getString(R.string.recipe_for_protection))
+                }
+                startActivity(intent)
+            }
+
+            recipeStrength.setOnClickListener {
+                val intent = Intent(requireContext(), NutritionFoodItemsActivity::class.java).apply {
+                    putExtra("tool_bar_title", getString(R.string.recipe_for_strength))
+                }
+                startActivity(intent)
+            }
 
         }
     }

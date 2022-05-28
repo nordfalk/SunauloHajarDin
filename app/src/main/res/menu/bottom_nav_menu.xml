@@ -9,7 +9,7 @@
     <item
         android:id="@+id/navigation_recipes"
         android:icon="@drawable/ic_nutrition"
-        android:title="@string/title_Recipes" />
+        android:title="@string/nutrition" />
 
     <item
         android:id="@+id/navigation_health"
