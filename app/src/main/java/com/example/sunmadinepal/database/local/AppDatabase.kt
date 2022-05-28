@@ -33,16 +33,12 @@ abstract class AppDatabase: RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "App_database"
-                ).addMigrations(MIGRATION_1_2,MIGRATION_2_3,MIGRATION_3_4).build()
+                ).addMigrations(MIGRATION_2_3,MIGRATION_3_4)
+                    .fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 // return instance
                 instance
-            }
-        }
-
-        private val MIGRATION_1_2: Migration = object : Migration(1, 2) {
-            override fun migrate(database: SupportSQLiteDatabase) {
-                database.execSQL("CREATE TABLE IF NOT EXISTS `add_child` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `child_name` TEXT NOT NULL, `birth_date` TEXT NOT NULL, `gender` TEXT NOT NULL, `allergies` TEXT NOT NULL, `image` TEXT NOT NULL)")
             }
         }
 
