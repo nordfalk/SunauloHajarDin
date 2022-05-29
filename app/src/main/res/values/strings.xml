@@ -1,0 +1,175 @@
+<resources>
+    <string name="app_name">Sunaulo Hajar Din</string>
+    <string name="title_activity_navigation" translatable="false">Navigation</string>
+    <string name="title_home">Home</string>
+
+    <string name="title_Recipes">Nutrition</string>
+    <string name="nutrition">Nutrition</string>
+    <string name="recipe_pregnant_woman">Recipes for pregnant woman</string>
+    <string name="recipe_for_mothers">Recipes for mothers</string>
+    <string name="recipe_for_children">Recipes for children</string>
+
+    <string name="title_health">Health</string>
+    <string name="generalhealth">General health information</string>
+    <string name="Pregnancy">Pregnancy</string>
+    <string name="months_0to6">0–6 months</string>
+    <string name="months_6to9">6–9 months</string>
+    <string name="months_9to12">9–12 months</string>
+    <string name="months_12to24">12–24 months</string>
+
+    <string name="title_garden">Garden</string>
+    <string name="button" translatable="false">Button</string>
+    <string name="hello_add_weight_adder" translatable="false">Hello add weight adder</string>
+    <string name="garden">Garden</string>
+    <string name="language">Language</string>
+    <string name="change_language">Change Language</string>
+    <string name="next_doctors_appointment">Next doctors appointment</string>
+    <string name="tomato">Tomato</string>
+    <string name="welcome">Welcome</string>
+    <string name="doctor_appointment">Doctor Appointments</string>
+    <string name="add_doctor_appointment">Add Doctor Appointments +</string>
+
+    <string name="choose_language">Choose Language</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="recipesTranslate" translatable="false">3</string>
+    <string name="_1000_golden_days">1000 golden days</string>
+    <string name="health">Health</string>
+    <string name="How_to_plant_in_my_garden">How to plant in my garden</string>
+    <string name="cauliflower">Cauliflower</string>
+    <!--    Translate later-->
+    <string name="healthy_veggies">Healthy veggies</string>
+    <string name="doctor_appointments">Doctor Appointments</string>
+    <string name="preparing_the_soil">Preparing the soil</string>
+    <string name="how_to_make_compost">How to make compost</string>
+    <string name="how_to_water_crops">How to water crops</string>
+    <string name="what_to_grow_in_the_garden">What to grow in the garden</string>
+    <string name="save_date">Save Date</string>
+    <string name="my_doctor_appointments">My Doctor Appointments</string>
+    <string name="cabbage_is_rich_in_vitamin_k">Cabbage: is rich in Vitamin k</string>
+    <string name="tomato_is_rich_in_vitamin_a_c">Tomato: is rich in Vitamin A + C</string>
+    <string name="carrot_is_rich_in_vitamin_a">Carrot: is rich in Vitamin A</string>
+    <string name="sarg_it_is_healthy_and_easy_and_grows_all_year_around">Sarg: It is healthy and easy and grows all year around.</string>
+    <string name="pumpkin_rich_in_vitamin_a">Pumpkin: Rich in vitamin A</string>
+    <string name="onion_needed_for_most_foods_needs_frequent_watering">Onion: Needed for most foods. Needs frequent watering.</string>
+    <string name="cauliflower_it_helps_in_heart_disease_it_has_choline_and_sulforaphane">Cauliflower : it helps in Heart disease. It has Choline and Sulforaphane.</string>
+    <string name="cabbage_it_is_rich_in_vitamin_k">Cabbage : It is rich in Vitamin K.</string>
+    <string name="bitter_gourd_it_helps_in_lowering_blood_pressure">Bitter gourd : It helps in lowering blood pressure.</string>
+    <string name="tomato_it_is_rich_in_vitamin_a_and_c">Tomato : it is rich in Vitamin A and C</string>
+    <string name="carrot_it_is_rich_in_vitamin_a">Carrot : It is rich in Vitamin A</string>
+    <string name="cucumber_it_is_rich_in_vitamin_k">Cucumber : it is rich in Vitamin K</string>
+    <string name="eggplant_it_is_rich_in_minerals_and_fibers">Eggplant : it is rich in minerals and fibers</string>
+    <string name="suggestions_for_what_to_grow_in_your_garden">Suggestions for what to grow in your garden</string>
+    <string name="how_to_make_a_garden">How to make a garden</string>
+    <string name="_1_dig_the_soil_to_make_it_loose">1. Dig the soil to make it loose</string>
+    <string name="_2_prepare_the_soil_mix_compost_with_soil_add_compost_in_soil_and_leave_it_for_8_to_10_days">2. Prepare the soil: mix compost with soil add compost in soil and leave it for 8 to 10 days</string>
+    <string name="_3_moisturize_the_soil">3. Moisturize the soil</string>
+    <string name="_4_soil_be_prepared_in_8_to_10_days">4. Soil be prepared in 8 to 10 days</string>
+    <string name="_5_then_make_a_high_land_for_the_crops_growing">5. Then make a high land for the crops growing</string>
+
+    <string name="general_health_info">General health info</string>
+    <string name="_6_9_months">6-9 months</string>
+    <string name="_9_12_months">9-12 months</string>
+    <string name="doctor">Doctor</string>
+    <string name="title_doctor_appointments">Doctor</string>
+    <string name="Compost_title">How to make compost</string>
+    <string name="Compost_Step1">Compost size of 2m*2m</string>
+    <string name="Compost_Step2">To make compost we need Cow’s urine, leaves, bushes with leaves, ash and Cow dung (Make a pit according to how much land you have)</string>
+    <string name="Compost_Step3">Put layer by layer elements in the pit, firstly, put Bushes with leaves then cow dung, then Urine and ash. repeat until the pit is full</string>
+    <string name="Compost_Step4">Put a stick that reaches the bottom of the pit and cover it with Soil</string>
+    <string name="Compost_Step5">Your compost Pit will be ready in 30 to 35 days</string>
+    <string name="child">Child</string>
+    <string name="your_don_t_have_any_appointments">Your don’t have any appointments</string>
+    <string name="my_appointments">My Appointments</string>
+    <string name="add_new_appointment">Add new</string>
+    <string name="select_a_child">Select a child</string>
+    <string name="appointment_for">Appointment for</string>
+    <string name="doctor_s_name">Doctor\'s Name</string>
+    <string name="hospital_health_center">Hospital/Health Center</string>
+    <string name="appointment_date_time"><![CDATA[Appointment date & time]]></string>
+    <string name="delete_appointment">Delete Appointment</string>
+    <string name="are_your_sure_you_want_to_delete_this_appointment">Are your sure you want to delete this\nappointment?</string>
+    <string name="cancel">cancel</string>
+    <string name="delete">Delete</string>
+    <string name="title_activity_general_health_info">GeneralHealthInfoActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="feeding">Feeding</string>
+    <string name="quick_links">Quick Links</string>
+    <string name="healthy_eating">Healthy Eating</string>
+    <string name="water_sanitation"><![CDATA[Water & Sanitation]]></string>
+    <string name="visit_your_doctor_and_discuss_any_concerns_about_your_child_s_health_and_growth_together_with_the_doctor_this_app_only_provides_general_information">Visit your doctor and discuss any concerns about your child’s health and growth together with the doctor. This app only provides general information.</string>
+    <string name="general_health_ninfo">General Health \nInfo</string>
+    <string name="loading_data_from_firebase">Loading Data.....</string>
+    <string name="recipe_for_energy">Food items for Energy</string>
+    <string name="recipe_for_protection">Food items Protection</string>
+    <string name="recipe_for_strength">Food items for Strength</string>
+    <string name="child_s_name">Child\'s Name</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="gender">Gender</string>
+    <string name="allergies">Allergies</string>
+    <string name="done">done</string>
+    <string name="select">Select</string>
+    <string name="ok">OK</string>
+    <string name="select_date">Select Date</string>
+    <string name="new_appointment">New Appointment</string>
+    <string name="my_children">My Children</string>
+    <string name="daily_health_tips">Daily health tips</string>
+    <string name="upcoming_appointments">Upcoming appointments</string>
+    <string name="edit_appointment">Edit Appointment</string>
+    <string name="add_child">Add Child</string>
+    <string name="edit_child">Edit Child</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="select_time">Select Time</string>
+    <string name="recipes_for_children">Recipes for Children</string>
+    <string name="quiz">Quiz</string>
+    <string name="start_quiz">start quiz</string>
+    <string name="start_quiz_plan_text">Test your knowledge about nutrition, pregnancy, child care and healthy habits.</string>
+    <string name="first_question">How many times during pregnancy should you go to the health facility for a check up?</string>
+    <string name="first_option">A. 2 Times</string>
+    <string name="second_option">B. 4 Times</string>
+    <string name="third_option">C. 9 Times</string>
+    <string name="second_question">Is this a balanced and healthy meal when you are pregnant?</string>
+    <string name="second_question_first_option">A. Yes</string>
+    <string name="second_question_second_option">B. No</string>
+    <string name="third_question">Is this a balanced and healthy meal when you are pregnant?</string>
+    <string name="fourth_question">What should a 4 month old baby be fed?</string>
+    <string name="fourth_question_first_option">A.Only breast Milk</string>
+    <string name="fourth_question_second_option">B.Breast Milk and fruit</string>
+    <string name="fourth_question_third_option">C.Jaulo and Water</string>
+    <string name="fifth_question">Does a 3 month old baby need water?</string>
+    <string name="sixth_question">Is it healthy for your child to eat chips and cookies?</string>
+    <string name="seventh_question">Does this belong in the strength food group?</string>
+    <string name="eight_question">Does this belong in the energy food group?</string>
+    <string name="ninth_question">Does this belong in the protective food group?</string>
+    <string name="tenth_question">Does food from the energy food group help prevent diseases?</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="submit">submit</string>
+    <string name="skip">skip</string>
+    <string name="health_tip_1_title">Health tip one title.</string>
+    <string name="health_tip_1_desc">"Include food items for strength, such as potato, wheat, maiz, brown rice and ghee, in your daily meals.   These food items will ensure growth and proper development of the body.  See which foods that are body building foods "</string>
+    <string name="health_tip_2_title">Health tip two.</string>
+    <string name="health_tip_2_desc">When you eat leafy greens, cauliflower, bananas, lemons and pumpkin, you help the body fight diseases. Eat some of these protective food items every day.</string>
+    <string name="health_tip_3_title">Health tip three.</string>
+    <string name="health_tip_3_desc">You and your child need energy every day. Remember to include energy giving foods, such as soybean, chickpeas, fish and eggs, in your daily meals. Here are some more energy giving foods.</string>
+    <string name="health_tip_4_title">Health tip four.</string>
+    <string name="health_tip_4_desc">Always wash hands thoroughly with soap and water before cooking food and feeding your child. This will keep you and your child healthy, and prevent diseases, such as diarrhea and food poisoning. Read about 6 situations where it is important to wash hands with soap.</string>
+    <string name="health_tip_5_title">Health tip five.</string>
+    <string name="health_tip_5_desc">Do not feed your children food from the market, such as noodles, cookies and chips, on a daily basis. When you want to give your child a snack, try to give them fresh fruits or  beans instead.</string>
+    <string name="health_tip_6_title">Health tip six.</string>
+    <string name="health_tip_6_desc">Until your baby is 6 months old, breast milk contains all the nutrients and energy that your baby needs. There is no need to give water to your baby.See the many ways that you can breastfeed your baby.</string>
+
+    <string name="function">Function : </string>
+    <string name="ingredients">Ingredients :</string>
+    <string name="direction">Direction :</string>
+    <string name="read_more">Read More</string>
+    <string name="finish">FINISH</string>
+    <string name="go_to_next_question">GO TO NEXT QUESTION</string>
+
+</resources>

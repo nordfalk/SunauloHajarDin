@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">स्वागत</string>
+    <string name="next_doctors_appointment" translatable="false">"अर्को डाक्टर को नियुक्ति "</string>
+    <string name="tomato">टमाटर</string>
+    <string name="health">स्वास्थ</string>
+
+    <string name="title_home">गृह</string>
+    <string name="nutrition">पोषण</string>
+
+    <string name="title_Recipes">व्यञ्जनहरु</string>
+    <string name="recipe_pregnant_woman">गर्भवती महिला को लागि व्यञ्जनहरु</string>
+    <string name="recipe_for_mothers">आमाहरूको लागि व्यञ्जनहरू</string>
+    <string name="recipe_for_children">बच्चाहरु को लागि व्यञ्जनहरु</string>
+
+    <string name="title_health">स्वास्थ</string>
+    <string name="generalhealth">सामान्य जानकारी</string>
+    <string name="Pregnancy">गर्भावस्था</string>
+    <string name="months_0to6">० - ६ महिना</string>
+    <string name="months_6to9">६–९ महिना</string>
+    <string name="months_9to12">९–१२ महिना</string>
+    <string name="months_12to24">१२ - २४ महिना</string>
+
+    <string name="title_garden">बगैंचा</string>
+    <string name="title_doctor_appointments">डाक्टर</string>
+    <string name="doctor_appointment">डाक्टर नियुक्ति</string>
+    <string name="add_doctor_appointment">डाक्टर नियुक्ति थप्नुहोस् +</string>
+    <string name="garden">बगैंचा</string>
+    <string name="cauliflower">फूल गोबी</string>
+    <string name="choose_language">भाषा छान्नुहोस्</string>
+    <string name="language" translatable="false">भाषा</string>
+    <string name="_1000_golden_days">सुनौलो हजार दिन</string>
+    <string name="change_language">भाषा परिवर्तन</string>
+    <string name="title_activity_navigation" translatable="false">नेभिगेसन</string>
+    <string name="How_to_plant_in_my_garden">मेरो बगैचामा कसरी रोप्ने</string>
+    <string name="how_to_make_compost">कम्पोस्ट कसरी बनाउने</string>
+    <string name="how_to_water_crops">बालीलाई कसरी पानी दिने</string>
+    <string name="what_to_grow_in_the_garden">बगैंचामा के फलाउनु</string>
+    <string name="preparing_the_soil">माटो तयार गर्दै</string>
+    <string name="save_date">मिति बचत</string>
+    <string name="my_doctor_appointments">मेरो डाक्टरसंग नियुक्तिहरू</string>
+    <string name="healthy_veggies" translatable="false">स्वस्थ तरकारी</string>
+    <string name="doctor_appointments" translatable="false">मेरो डाक्टरसंग नियुक्तिहरू</string>
+    <string name="hello_blank_fragment" translatable="false">मेरो डाक्टरसंग नियुक्तिहरू</string>
+    <string name="cabbage_is_rich_in_vitamin_k">बन्दा : यो विटामिन k काे धनी</string>
+    <string name="tomato_is_rich_in_vitamin_a_c">टमाटर : विटामिन A र C काे धनी</string>
+    <string name="carrot_is_rich_in_vitamin_a">गाजर : विटामिन ए मा धनी</string>
+    <string name="sarg_it_is_healthy_and_easy_and_grows_all_year_around">जस्तै साग :  साग वर्ष भरि फलाउन सकिन्छ र यो स्वस्थ को लागि पनि फाइदाजनक छ। यसले हामीलाई हाम्रो आँखा तेजिलो बनाउने मद्दत गर्दछ</string>
+    <string name="pumpkin_rich_in_vitamin_a">फर्सी : यसमा भिटामिन A पाउन सकिन्छ।</string>
+    <string name="onion_needed_for_most_foods_needs_frequent_watering">प्याज :यसले मानिस काे उर्वरा शक्ति बढाउने काम गर्दछ।</string>
+    <string name="cauliflower_it_helps_in_heart_disease_it_has_choline_and_sulforaphane">काउली : यस तरकारी मानिस काे मुटु समन्धी सहयोग पुराउदछ। Choline र sulforaphane काे धनी।</string>
+    <string name="cabbage_it_is_rich_in_vitamin_k">बन्दा : यो विटामिन k काे धनी</string>
+    <string name="bitter_gourd_it_helps_in_lowering_blood_pressure">करेका : यो हाम्रो ब्लड प्रेसर कम गर्न मद्दत गर्छ।</string>
+    <string name="tomato_it_is_rich_in_vitamin_a_and_c">चिप्ले भिन्डी : हाम्रो तौल घटाउन मद्दत गर्छ।</string>
+    <string name="carrot_it_is_rich_in_vitamin_a">टमाटर : विटामिन A र C काे धनी</string>
+    <string name="cucumber_it_is_rich_in_vitamin_k">गाजर : विटामिन ए मा धनी</string>
+    <string name="eggplant_it_is_rich_in_minerals_and_fibers">काक्ररा : यसमा हामी विटामिन K पाउन सकिन्छ।</string>
+    <string name="suggestions_for_what_to_grow_in_your_garden"> करेसाबारीमा के के फलाउन सकिन्छ? त्यसका लागि सुझावहरु।</string>
+    <string name="how_to_make_a_garden">कसरी करेसाबारी बनाउने</string>
+    <string name="_1_dig_the_soil_to_make_it_loose">१. यसलाई खुकुलो बनाउन माटो खन्नुहोस्</string>
+    <string name="_2_prepare_the_soil_mix_compost_with_soil_add_compost_in_soil_and_leave_it_for_8_to_10_days">२. पहिला आफ्नो जग्गा तयार गर्नु पर्दछ। हामी माटो मा कम्पोष्ट मल मिलाएर राख्नु पर्दछ। जग्गामा कम्पोष्ट मल मिसाएर ८ देखि १० दिन छोडिने र नियमित पनि राख्ने</string>
+    <string name="_3_moisturize_the_soil">३. त्यसपछि केही दिन माटो लाई तयार हुन दिने</string>
+    <string name="_4_soil_be_prepared_in_8_to_10_days">४. ८ देखि १० दिनमा माटो तयार हुन्छ</string>
+    <string name="_5_then_make_a_high_land_for_the_crops_growing">५. त्यसपछि बाली उब्जाउनको लागि अग्लो जमिन बनाउनुहोस्</string>
+    <string name="general_health_info">सामान्य स्वास्थ्य जानकारी</string> <!--TODO get real translation from https://docs.google.com/document/d/1za7rBx0XfbcbOIcsZ8zLHlE-6GBPPE_H-N1SWb2eT28/edit (currently google translate) -->
+    <string name="_6_9_months">०- ९ महिना</string>
+    <string name="_9_12_months">९ - १२ महिना</string>
+    <string name="doctor">डाक्टर</string>
+    <string name="Compost_title">कसरी कम्पोष्ट मल बनाउने</string>
+    <string name="Compost_Step1">"कम्पोष्ट काे आकार २m*२m २m चौडाई २m लम्बाई "</string>
+    <string name="Compost_Step2">"पहिला  कम्पोष्ट मल बनाउनको लागि गाईको पिसाब ,पातहरू, वरिपरि रहेका झारहरु , गाईको दिसा र खरानी काे आवश्यक पर्दछ। यी सबै कुराहरू जम्मा गरेर राख्ने। त्यसपछि आफूलाई चाहिने जति खाडल बनाउने "</string>
+    <string name="Compost_Step3">"त्यस खाडल मा पहिला एक तह झारहरू , पातहरू राख्ने र त्यसपछि पिसाब राख्ने अनि गोबर राख्ने अनि खरानी राख्ने ।  यसको सबै काे तह मिलाउँदै राख्ने ।  सबै काे मात्रा मिलाउँदै राखे पछि खाडल भरिन्छ। "</string>
+    <string name="Compost_Step4">र अन्तिम मा त्यसलाई एउटा लौरो जमीन सम्म पुग्ने गरी माटोले लिपेर डाक्ने।</string>
+    <string name="Compost_Step5">कम्पोष्ट मल ३० देखि ३५ दिन भित्र तयार हुनेछ</string>
+    <string name="my_children">मेरा बालबच्चाहरु</string>
+    <string name="daily_health_tips">दैनिक स्वास्थ्य सुझावहरू</string>
+    <string name="upcoming_appointments">आगामी नियुक्तिहरू</string>
+    <string name="general_health_ninfo">सामान्य स्वास्थ्य जानकारी</string>
+    <string name="my_appointments">नियुक्ति</string>
+    <string name="your_don_t_have_any_appointments">तपाईंको कुनै नियुक्ति छैनन्</string>
+    <string name="add_new_appointment">नयाँ थप्नुहोस्</string>
+    <string name="appointment_for">नियुक्ति</string>
+    <string name="select_a_child">बच्चा थप्नुहोस्</string>
+    <string name="doctor_s_name">डाक्टरको नाम</string>
+    <string name="hospital_health_center">अस्पताल/स्वास्थ्य केन्द्र</string>
+    <string name="select">छान्नुहोस्</string>
+    <string name="appointment_date_time"><![CDATA[नियुक्ति मिति]]></string>
+    <string name="done">पेश गर्नुहोस्</string>
+    <string name="new_appointment">नयाँ नियुक्ति</string>
+    <string name="edit_appointment">सम्पादन गर्नुहोस्</string>
+    <string name="add_child">बच्चा थप्नुहोस्</string>
+    <string name="child_s_name">बच्चाको नाम</string>
+    <string name="birth_date">जन्म मिति</string>
+    <string name="gender">लिङ्ग</string>
+    <string name="allergies">एलर्जी</string>
+    <string name="edit_child">सम्पादन गर्नुहोस्</string>
+    <string name="select_date">मिति छान्नुहोस्</string>
+    <string name="dismiss">खारेज</string>
+    <string name="ok">ठिक छ</string>
+    <string name="select_time">समय छान्नुहोस्</string>
+    <string name="first_question">गर्भावस्थामा तपाईले कति पटक स्वास्थ्य संस्थामा जाँच गराउन जानु पर्छ?</string>
+    <string name="first_option">क. दुई पटक</string>
+    <string name="second_option">ख. चार पटक</string>
+    <string name="third_option">ग.नौ पटक</string>
+    <string name="second_question">के तपाई गर्भवती हुँदा यो सन्तुलित र स्वस्थ खाना हो?</string>
+    <string name="second_question_second_option">ख.होइन</string>
+    <string name="second_question_first_option">क.हो</string>
+    <string name="third_question">के तपाई गर्भवती हुँदा यो सन्तुलित र स्वस्थ खाना हो?</string>
+    <string name="fourth_question">What should a 4 month old baby be fed?</string>
+    <string name="fourth_question_first_option">क.आमाको दुध</string>
+    <string name="fourth_question_second_option">ख.आमाको दुध र फलफूल</string>
+    <string name="fourth_question_third_option">ग.जाउलो र पानी</string>
+    <string name="fifth_question">के तीन महिनाको बच्चालाई पानी चाहिन्छ?</string>
+    <string name="sixth_question">के तपाईंको बच्चाको लागि चिप्स कुकीहरू खानु स्वस्थकर हुन्छ?</string>
+    <string name="seventh_question">के यो बलियो खाना  समूहमा पर्दछ?</string>
+    <string name="eight_question">के यो शक्ति  खाना समूहमा पर्दछ?</string>
+    <string name="ninth_question">के यो सुरक्षात्मक खाना समूहमा पर्दछ?</string>
+    <string name="tenth_question">के शक्ति खाना समूहले  रोग रोक्न मद्त गर्दछ?</string>
+    <string name="congratulations">बधाई छ</string>
+    <string name="start_quiz_plan_text">पोषण, गर्भावस्था, बाल हेरचाह र स्वस्थ बानी बारे आफ्नो ज्ञान परीक्षण गर्नुहोस्।</string>
+    <string name="start_quiz">प्रश्नोत्तरी सुरु गर्नुहोस्</string>
+    <string name="submit">पेश गर्नुहोस्</string>
+    <string name="skip">छोड्नुहोस्</string>
+    <string name="health_tip_1_title">Health tip one title.</string>
+    <string name="health_tip_1_desc">बलियो बन्नको लागि दैनिक यी खाना  खानु  जरुरी  छ जस्तैः आलु, गहुँ, मकै, मार्सी चामल  (  नफलेको चामल ) र घीउ  ।                                  यी खानेकुराले शरीरको वृद्धि र पुर्ण रूपमा बिकास गर्दछ। शरीर बनाउने खानेकुराहरु हेर</string>
+    <string name="health_tip_2_title">Health tip two.</string>
+    <string name="health_tip_2_desc">हरियो सागपात, काउली , केरा , कागती र फर्सी  खानाले रोग संग लड्न सक्ने क्षमता बढाउछ।  दैनिक यि मध्यक सुरक्षात्तमक खाना खानु पर्दछ</string>
+    <string name="health_tip_3_title">Health tip three.</string>
+    <string name="health_tip_3_desc">आमा र बच्चालाई दैनिक शक्तिको आवश्यकता  पर्दछ। त्येसैले दिनहुँ शक्ति दिने खाना खानु पर्दछ  जस्तै: भटमास, चना, माछा र अन्डा । केहि  शक्ति दिने खाना यसप्रकार छन् ।</string>
+    <string name="health_tip_4_title">Health tip four.</string>
+    <string name="health_tip_4_desc">खाना पकाउनु र बच्चा लाई खुवाउनु अधि सधैं सफा पानी र साबुनले हात धुनु पर्छ। यसोगर्नले आमा र बच्चा स्वास्थ र रोग मुक्त हुन्छन् ।जस्तैः झाडापखाला र बान्ता हुने। साबुनपानीले हात धुनु पर्न आवश्यक ६ अवस्था हरु पढ्नुहोस।</string>
+    <string name="health_tip_5_title">Health tip five.</string>
+    <string name="health_tip_5_desc">दैनिक रुपमा बच्चाहरूलाई बजारको खानेकुरा खुवाउनु हुँदैन जस्तैः चाउचाउ , बिस्कुट र चिप्स आदि। बच्चाहरुलाइ खाजा दिने बेलामा ताजा फलफूल तथा गेडागुडी दिनु पर्छ।</string>
+    <string name="health_tip_6_title">Health tip six.</string>
+    <string name="health_tip_6_desc">६ महीना सम्म बच्चालाई आमाको दुध खुवाउदा बच्चालाई चहिने पोषण र शक्ति प्राप्त गर्दछ। त्यतिबेलासम्म बच्चालाई पानी दिनु जरुरी  छैन। स्तनपानका विभिन्न आसनहरु  हेर्नुहोस।</string>
+    <string name="function">कार्य : </string>
+    <string name="recipe_for_energy">ऊर्जा दिने खाना</string>
+    <string name="recipe_for_protection">सुरक्षात्मक खाना</string>
+    <string name="recipe_for_strength">शरीर निर्माण खाना (शक्ति)</string>
+    <string name="recipes_for_children">बच्चाहरु को लागि व्यञ्जनहरु</string>
+    <string name="ingredients">सामग्री :</string>
+    <string name="direction">बनाउने तरीका :</string>
+    <string name="read_more">थप पढ्नुहोस्</string>
+    <string name="quiz">प्रश्नोत्तरी</string>
+    <string name="finish">समाप्त गर्नुहोस्</string>
+    <string name="go_to_next_question">अर्को प्रश्नमा जानुहोस्</string>
+
+</resources>

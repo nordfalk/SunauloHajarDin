@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.sunmadinepal.fragment.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_health"
+        android:name="com.example.sunmadinepal.fragment.health.HealthFragment"
+        android:label="@string/title_health"
+        tools:layout="@layout/health" >
+        <action
+            android:id="@+id/action_navigation_health_to_fragment_0_6_months"
+            app:destination="@id/fragment_0_6_months" />
+        <action
+            android:id="@+id/action_navigation_health_to_fragment_12_24_months"
+            app:destination="@id/fragment_12_24_months" />
+        <action
+            android:id="@+id/action_navigation_health_to_fragment_maternity"
+            app:destination="@id/fragment_maternity" />
+        <action
+            android:id="@+id/action_navigation_health_to_fragment_06_09_months"
+            app:destination="@id/fragment_06_09_months" />
+        <action
+            android:id="@+id/action_navigation_health_to_fragment_09_12_months"
+            app:destination="@id/fragment_09_12_months" />
+        <action
+            android:id="@+id/action_navigation_health_to_fragment_generalhealth"
+            app:destination="@id/fragment_generalhealth" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_recipes"
+        android:name="com.example.sunmadinepal.fragment.recipes.RecipesFragment"
+        android:label="@string/title_Recipes"
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_navigation_recipes_to_recipes_Pregnant_Woman_Fragment"
+            app:destination="@id/recipes_Pregnant_Woman_Fragment" />
+        <action
+            android:id="@+id/action_navigation_recipes_to_recipes_Children_Fragment"
+            app:destination="@id/recipes_Children_Fragment" />
+        <action
+            android:id="@+id/action_navigation_recipes_to_recipes_Mothers_Fragment"
+            app:destination="@id/recipes_Mothers_Fragment" />
+    </fragment>
+
+   <!-- <fragment
+        android:id="@id/navigation_garden"
+        android:name="com.example.sunmadinepal.fragment.garden.GardenFragment"
+        android:label="@string/title_garden"
+        tools:layout="@layout/fragment_garden"
+        >
+        <action
+            android:id="@+id/action_navigation_garden_to_soilFragment"
+            app:destination="@id/soilFragment" />
+        <action
+            android:id="@+id/action_navigation_garden_to_compostFragment"
+            app:destination="@id/compostFragment" />
+        <action
+            android:id="@+id/action_navigation_garden_to_waterFragment"
+            app:destination="@id/waterFragment" />
+        <action
+            android:id="@+id/action_navigation_garden_to_growingFragment"
+            app:destination="@id/growingFragment" />
+    </fragment>-->
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.sunmadinepal.fragment.doctor.DoctorFragment"
+        android:label="@string/title_doctor_appointments"
+        tools:layout="@layout/fragment_profile">
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_0_6_months"
+        android:name="com.example.sunmadinepal.fragment.health.Fragment_0_6_months"
+        android:label="fragment_0_6_months"
+        tools:layout="@layout/fragment_0_6_months" >
+        <action
+            android:id="@+id/action_fragment_0_6_months_to_navigation_health"
+            app:destination="@id/navigation_health" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_12_24_months"
+        android:name="com.example.sunmadinepal.fragment.health.Fragment_12_24_months"
+        android:label="fragment_12_24_months"
+        tools:layout="@layout/fragment_12_24_months" >
+        <action
+            android:id="@+id/action_fragment_12_24_months_to_navigation_health"
+            app:destination="@id/navigation_health" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_06_09_months"
+        android:name="com.example.sunmadinepal.fragment.health.Fragment_06_09_months"
+        android:label="fragment_06_09_months"
+        tools:layout="@layout/fragment_06_09_months">
+        <action
+            android:id="@+id/action_agment_06_12_months_to_navigation_health"
+            app:destination="@id/navigation_health" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_09_12_months"
+        android:name="com.example.sunmadinepal.fragment.health.Fragment_09_12_months"
+        android:label="fragment_09_12_months"
+        tools:layout="@layout/fragment_09_12_months">
+        <action
+            android:id="@+id/action_agment_06_12_months_to_navigation_health"
+            app:destination="@id/navigation_health" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_maternity"
+        android:name="com.example.sunmadinepal.fragment.health.Fragment_maternity"
+        android:label="fragment_maternity"
+        tools:layout="@layout/fragment_maternity" >
+        <action
+            android:id="@+id/action_fragment_maternity_to_navigation_health"
+            app:destination="@id/navigation_health" />
+    </fragment>
+    <activity
+        android:id="@+id/insideRecipes"
+        android:name="com.example.sunmadinepal.fragment.recipes.InsideRecipes"
+        android:label="activity_inside_recipes"
+        tools:layout="@layout/activity_inside_recipes" />
+    <fragment
+        android:id="@+id/fragment_generalhealth"
+        android:name="com.example.sunmadinepal.fragment.health.Fragment_generalhealth"
+        android:label="fragment_generalhealth"
+        tools:layout="@layout/fragment_generalhealth" >
+        <action
+            android:id="@+id/action_fragment_generalhealth_to_navigation_health"
+            app:destination="@id/navigation_health" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipes_Pregnant_Woman_Fragment"
+        android:name="com.example.sunmadinepal.fragment.recipes.Recipes_Pregnant_Woman_Fragment"
+        android:label="fragment_pregant_woman"
+        tools:layout="@layout/fragment_pregant_woman" >
+        <action
+            android:id="@+id/action_recipes_Pregnant_Woman_Fragment_to_navigation_recipes"
+            app:destination="@id/navigation_recipes" />
+        <action
+            android:id="@+id/action_recipes_Pregnant_Woman_Fragment_to_insideRecipes"
+            app:destination="@id/insideRecipes" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipes_Children_Fragment"
+        android:name="com.example.sunmadinepal.fragment.recipes.Recipes_Children_Fragment"
+        android:label="fragment_recipes_children"
+        tools:layout="@layout/fragment_recipes_children" >
+        <action
+            android:id="@+id/action_recipes_Children_Fragment_to_navigation_recipes"
+            app:destination="@id/navigation_recipes" />
+        <action
+            android:id="@+id/action_recipes_Children_Fragment_to_insideRecipes"
+            app:destination="@id/insideRecipes" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipes_Mothers_Fragment"
+        android:name="com.example.sunmadinepal.fragment.recipes.Recipes_Mothers_Fragment"
+        android:label="fragment_recipes_mothers"
+        tools:layout="@layout/fragment_recipes_mothers" >
+        <action
+            android:id="@+id/action_recipes_Mothers_Fragment_to_navigation_recipes"
+            app:destination="@id/navigation_recipes" />
+        <action
+            android:id="@+id/action_recipes_Mothers_Fragment_to_insideRecipes"
+            app:destination="@id/insideRecipes" />
+    </fragment>
+   <!-- <fragment
+        android:id="@+id/compostFragment"
+        android:name="com.example.sunmadinepal.fragment.garden.CompostFragment"
+        android:label="fragment_compost"
+        tools:layout="@layout/fragment_compost" >
+        <action
+            android:id="@+id/action_compostFragment_to_navigation_garden"
+            app:destination="@id/navigation_garden" />
+    </fragment>
+    <fragment
+        android:id="@+id/soilFragment"
+        android:name="com.example.sunmadinepal.fragment.garden.SoilFragment"
+        android:label="fragment_soil"
+        tools:layout="@layout/fragment_soil" >
+        <action
+            android:id="@+id/action_soilFragment_to_navigation_garden"
+            app:destination="@id/navigation_garden" />
+    </fragment>
+    <fragment
+        android:id="@+id/waterFragment"
+        android:name="com.example.sunmadinepal.fragment.garden.WaterFragment"
+        android:label="fragment_water"
+        tools:layout="@layout/fragment_water" >
+        <action
+            android:id="@+id/action_waterFragment_to_navigation_garden"
+            app:destination="@id/navigation_garden" />
+    </fragment>
+    <fragment
+        android:id="@+id/growingFragment"
+        android:name="com.example.sunmadinepal.fragment.garden.GrowingFragment"
+        android:label="fragment_growing"
+        tools:layout="@layout/fragment_growing" >
+        <action
+            android:id="@+id/action_growingFragment_to_navigation_garden"
+            app:destination="@id/navigation_garden" />
+    </fragment>-->
+    <fragment
+        android:id="@+id/child_navigation"
+        android:name="com.example.sunmadinepal.fragment.child.ChildFragment"
+        android:label="Child"
+        tools:layout="@layout/fragment_child" />
+    <fragment
+        android:id="@+id/navigation_quiz"
+        android:name="com.example.sunmadinepal.fragment.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
+
+</navigation>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sunmadinepal">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo_orange"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_logo_orange_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Sunmadinepal"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".fragment.home.DailyHealthTipsDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.health.activity.HealthDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.quiz.ResultActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.quiz.StartQuizActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.nutrition.activity.RecipeForEnergyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.nutrition.activity.NutritionFoodItemsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.child.activity.EditChildActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.doctor.activity.EditAppointmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.child.AddChildActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.doctor.activity.AddAppointmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.health.activity.GeneralHealthInfoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.recipes.InsideRecipes"
+            android:exported="true" />
+        <!--
+<activity
+            android:name="com.example.sunmadinepal.fragment.recipes.Recipes_pregant_woman"
+            android:exported="true" />
+        -->
+        <activity
+            android:name=".fragment.doctor.profile_Add"
+            android:exported="true" />
+        <activity
+            android:name=".Navigation"
+            android:exported="true"
+            android:label="@string/title_activity_navigation" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

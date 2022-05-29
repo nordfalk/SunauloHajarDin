@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.quiz.StartQuizActivity">
+
+
+    <include
+        android:id="@+id/start_quiz_tool_bar"
+        layout="@layout/tool_bar_layout" />
+
+      <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_quiz_tool_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingVertical="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/question_related_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/question_related_image_view">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:indeterminate="false"
+                android:max="10"
+                android:minHeight="50dp"
+                android:progress="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/progress_count_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="0/0"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:translationY="-10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+
+            <ImageView
+                android:id="@+id/question_related_image_view"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:src="@drawable/test_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_count_tv"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/question_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:text="@string/eight_question"
+                android:translationY="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/question_related_image_view" />
+
+            <TextView
+                android:id="@+id/yes_tv"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="25dp"
+                android:translationY="20dp"
+                android:background="@drawable/default_option_border_bg"
+                android:gravity="start"
+                android:padding="15dp"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/question_tv"
+                tools:text="Test" />
+
+            <TextView
+                android:id="@+id/no_tv"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="25dp"
+                android:translationY="20dp"
+                android:background="@drawable/default_option_border_bg"
+                android:gravity="start"
+                android:padding="15dp"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/yes_tv"
+                tools:text="Test" />
+
+            <TextView
+                android:id="@+id/third_question"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="25dp"
+                android:translationY="20dp"
+                android:background="@drawable/default_option_border_bg"
+                android:gravity="start"
+                android:padding="15dp"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/no_tv"
+                tools:text="Test" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="0dp"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:paddingVertical="0dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:translationY="-20dp"
+                app:backgroundTint="@color/Orange"
+                app:cardElevation="0dp"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/third_question"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/skip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingVertical="20dp"
+                android:text="@string/skip"
+                android:textColor="#E39F3E"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/submit_button" />
+            <!--  <com.google.android.material.button.MaterialButton
+                android:id="@+id/yes_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="0dp"
+                android:layout_marginStart="15dp"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:paddingVertical="0dp"
+                android:text="A. yes"
+                android:textAlignment="textStart"
+                android:textColor="#757575"
+                android:textSize="11sp"
+                app:backgroundTint="#F5F5F5"
+                app:cardElevation="0dp"
+                app:cornerRadius="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question_tv"
+                tools:ignore="UnusedAttribute" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/no_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:paddingVertical="0dp"
+                android:text="A. yes"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:backgroundTint="@color/green_color"
+                app:cardElevation="0dp"
+                app:cornerRadius="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/yes_button"
+                tools:ignore="UnusedAttribute" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:paddingVertical="0dp"
+                android:text="submit"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:backgroundTint="@color/Orange"
+                app:cardElevation="0dp"
+                app:cornerRadius="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/no_button"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingVertical="20dp"
+                android:text="skip"
+                android:textColor="#E39F3E"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/submit_button" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_quiz_tool_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/question_related_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/question_related_image_view">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:indeterminate="false"
+                android:max="10"
+                android:minHeight="50dp"
+                android:progress="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/progress_count_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="0/0"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:translationY="-10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+
+            <ImageView
+                android:id="@+id/question_related_image_view"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:src="@drawable/test_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_count_tv"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/question_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="@string/test_your_knowledge_about_nutrition_pregnancy_child_care_and_healthy_habits"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:translationY="-10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/question_related_image_view" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/yes_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="0dp"
+                android:layout_marginStart="15dp"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:paddingVertical="0dp"
+                android:text="A. yes"
+                android:textAlignment="textStart"
+                android:textColor="#757575"
+                android:textSize="11sp"
+                app:backgroundTint="#F5F5F5"
+                app:cardElevation="0dp"
+                app:cornerRadius="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question_tv"
+                tools:ignore="UnusedAttribute" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/no_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:paddingVertical="0dp"
+                android:text="A. yes"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:backgroundTint="@color/green_color"
+                app:cardElevation="0dp"
+                app:cornerRadius="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/yes_button"
+                tools:ignore="UnusedAttribute" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:paddingVertical="0dp"
+                android:text="submit"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:backgroundTint="@color/Orange"
+                app:cardElevation="0dp"
+                app:cornerRadius="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/no_button"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="skip"
+                android:textColor="#E39F3E"
+                android:textSize="16sp"
+                android:paddingVertical="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/submit_button" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

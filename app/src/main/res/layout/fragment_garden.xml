@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Widget.Material.ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_vector"
+    android:fillViewport="true"
+    tools:context=".fragment.garden.GardenFragment">
+
+    <TextView
+        android:id="@+id/text_garden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/soil"
+        android:layout_width="320dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_box"
+        android:drawableLeft="@drawable/soil_icon"
+        android:text="@string/preparing_the_soil"
+        android:textAlignment="center"
+        android:textColor="@color/Orange"
+        android:textSize="20sp"
+        android:theme="@style/Button.White"
+        app:layout_constraintBottom_toTopOf="@+id/compost"
+        app:layout_constraintDimensionRatio="h,3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/compost"
+        android:layout_width="320dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_box"
+        android:drawableLeft="@drawable/compost_icon"
+        android:text="@string/how_to_make_compost"
+        android:textAlignment="center"
+        android:textColor="@color/Orange"
+        android:textSize="20sp"
+        android:theme="@style/Button.White"
+        app:layout_constraintBottom_toTopOf="@+id/water"
+        app:layout_constraintDimensionRatio="h,3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soil" />
+
+    <Button
+        android:id="@+id/water"
+        android:layout_width="320dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_box"
+        android:drawableLeft="@drawable/watering_can_icon"
+        android:text="@string/how_to_water_crops"
+        android:textAlignment="center"
+        android:textColor="@color/Orange"
+        android:textSize="20sp"
+        android:theme="@style/Button.White"
+        app:layout_constraintBottom_toTopOf="@+id/grow"
+        app:layout_constraintDimensionRatio="h,3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compost" />
+
+    <Button
+        android:id="@+id/grow"
+        android:layout_width="320dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/background_box"
+        android:drawableLeft="@drawable/vegetables_icon"
+        android:text="@string/what_to_grow_in_the_garden"
+        android:textAlignment="center"
+        android:textColor="@color/Orange"
+        android:textSize="20sp"
+        android:theme="@style/Button.White"
+        app:layout_constraintBottom_toTopOf="@+id/text_garden"
+        app:layout_constraintDimensionRatio="h,3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/water"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--android:drawableLeft="@drawable/pregnant_woman"-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--Start of first box -->
+    <!--<ImageView
+            android:id="@+id/tomato_box"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/background_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/How_to_plant_in_my_garden"/>
+
+        <TextView
+            android:id="@+id/tomato_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/tomato"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="@id/tomato_box"
+            app:layout_constraintEnd_toEndOf="@id/tomato_box"
+            app:layout_constraintTop_toTopOf="@id/tomato_box" />
+
+        <ImageButton
+            android:id="@+id/tomota_image"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:src="@drawable/_tomato_image"
+            app:layout_constraintTop_toBottomOf="@id/tomato_text"
+            app:layout_constraintBottom_toBottomOf="@id/tomato_box"
+            app:layout_constraintEnd_toEndOf="@id/tomato_box"
+            app:layout_constraintStart_toStartOf="@id/tomato_box"
+            app:shapeAppearanceOverlay="@style/corner" />-->
+
+    <!-- Start of second box -->
+    <!--<ImageView
+        android:id="@+id/cauliflower_box"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/background_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tomato_box"/>
+
+        <TextView
+            android:id="@+id/cauliflower_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/cauliflower"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="@id/cauliflower_box"
+            app:layout_constraintEnd_toEndOf="@id/cauliflower_box"
+            app:layout_constraintTop_toTopOf="@id/cauliflower_box" />
+
+        <ImageButton
+            android:id="@+id/cauliflower_image"
+            android:layout_width="320dp"
+            android:layout_height="125dp"
+            android:background="@color/white"
+            android:src="@drawable/cauliflower"
+            app:layout_constraintTop_toBottomOf="@id/cauliflower_text"
+            app:layout_constraintBottom_toBottomOf="@id/cauliflower_box"
+            app:layout_constraintEnd_toEndOf="@id/cauliflower_box"
+            app:layout_constraintStart_toStartOf="@id/cauliflower_box"
+            app:shapeAppearanceOverlay="@style/corner"
+            />-->
+    <!--<TableLayout (alternative test to layout)
+        android:id="@+id/tomato_box"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/How_to_plant_in_my_garden">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Tomato"
+            android:textAlignment="center"
+            android:textColor="@color/Orange"
+            android:textSize="32sp">
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/tomato_image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:src="@drawable/_tomato_image"
+            app:layout_constraintTop_toBottomOf="@id/How_to_plant_in_my_garden">
+        </ImageButton>
+    </TableLayout>-->
