@@ -4,28 +4,143 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="start"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+  <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/background_vector"
+      tools:context=".fragment.health.HealthFragment">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/ic_launcher" />
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="133dp"
+          android:textAlignment="center"
+          android:textSize="22sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/lady12to24" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Login" />
-    </LinearLayout>
+      <Button
+          android:id="@+id/general_information"
+          android:layout_width="150dp"
+          android:layout_height="0dp"
+          android:layout_marginTop="50dp"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/background_box"
+          android:text="@string/general_health_info"
+          android:textAlignment="center"
+          android:textColor="@color/Orange"
+          android:textSize="22sp"
+          android:theme="@style/Button.White"
+          app:layout_constraintBottom_toTopOf="@+id/lady_0to6"
+          app:layout_constraintDimensionRatio="h,150:155"
+          app:layout_constraintEnd_toStartOf="@id/maternity"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_chainStyle="spread_inside" />
+
+      <Button
+          android:id="@+id/maternity"
+          android:layout_width="150dp"
+          android:layout_height="0dp"
+          android:layout_marginTop="50dp"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/background_box"
+          android:drawableBottom="@drawable/pregnant_woman"
+          android:text="@string/Pregnancy"
+          android:textAlignment="center"
+          android:textColor="@color/Orange"
+          android:textSize="16sp"
+          android:theme="@style/Button.White"
+          app:layout_constraintBottom_toTopOf="@+id/lady6to9"
+          app:layout_constraintDimensionRatio="h,150:155"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@id/general_information"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_chainStyle="spread_inside" />
+
+      <Button
+          android:id="@+id/lady_0to6"
+          android:layout_width="150dp"
+          android:layout_height="0dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/background_box"
+          android:drawableBottom="@drawable/mum_with_baby"
+          android:text="@string/months_0to6"
+          android:textAlignment="center"
+          android:textColor="@color/Orange"
+          android:textSize="16sp"
+          android:theme="@style/Button.White"
+          app:layout_constraintBottom_toTopOf="@+id/lady9to12"
+          app:layout_constraintDimensionRatio="h,150:155"
+          app:layout_constraintEnd_toStartOf="@id/lady6to9"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/general_information" />
+
+      <Button
+          android:id="@+id/lady6to9"
+          android:layout_width="150dp"
+          android:layout_height="0dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/background_box"
+          android:drawableBottom="@drawable/mum_with_kid"
+          android:text="@string/_6_9_months"
+          android:textAlignment="center"
+          android:textColor="@color/Orange"
+          android:textSize="16sp"
+          android:theme="@style/Button.White"
+          app:layout_constraintBottom_toTopOf="@+id/lady12to24"
+          app:layout_constraintDimensionRatio="h,150:155"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@id/lady_0to6"
+          app:layout_constraintTop_toBottomOf="@+id/maternity" />
+
+      <Button
+          android:id="@+id/lady9to12"
+          android:layout_width="150dp"
+          android:layout_height="0dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="100dp"
+          android:background="@drawable/background_box"
+          android:drawableBottom="@drawable/mum_with_kid"
+          android:text="@string/_9_12_months"
+          android:textAlignment="center"
+          android:textColor="@color/Orange"
+          android:textSize="16sp"
+          android:theme="@style/Button.White"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintDimensionRatio="h,150:155"
+          app:layout_constraintEnd_toStartOf="@id/lady12to24"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/lady_0to6" />
+
+      <Button
+          android:id="@+id/lady12to24"
+          android:layout_width="150dp"
+          android:layout_height="0dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="100dp"
+          android:background="@drawable/background_box"
+          android:drawableBottom="@drawable/mum_with_child"
+          android:text="@string/months_12to24"
+          android:textAlignment="center"
+          android:textColor="@color/Orange"
+          android:textSize="16sp"
+          android:theme="@style/Button.White"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintDimensionRatio="h,150:155"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@id/lady9to12"
+          app:layout_constraintTop_toBottomOf="@+id/lady6to9" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

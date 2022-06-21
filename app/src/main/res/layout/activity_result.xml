@@ -99,7 +99,7 @@
                 android:layout_height="55dp"
                 android:layout_marginVertical="50dp"
                 android:outlineSpotShadowColor="@android:color/transparent"
-                android:text="go it"
+                android:text="@string/go_it"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="11sp"

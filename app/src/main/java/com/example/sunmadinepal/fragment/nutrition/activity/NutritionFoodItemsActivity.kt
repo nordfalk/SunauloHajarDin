@@ -88,10 +88,9 @@ class NutritionFoodItemsActivity : AppCompatActivity() {
             it.forEach {foodItems->
                 activityNutritionFoodItemsBinding.progressBar.visibility = View.GONE
                 activityNutritionFoodItemsBinding.nutritionFoodConstrain.visibility = View.VISIBLE
-
                 activityNutritionFoodItemsBinding.foodItemsTv.text = foodItems.foodItems
 //                loadImage(activityNutritionFoodItemsBinding.foodItemsImage,foodItems.imageUrl)
-//
+
                 Glide.with(this).load(foodItems.imageUrl).into(activityNutritionFoodItemsBinding.foodItemsImage)
             }
         })

@@ -90,8 +90,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="20dp"
-                                    android:fontFamily="@font/poppins_medium"
                                     android:text="@string/general_health_ninfo"
+                                    android:textStyle="bold"
+                                    android:lineSpacingExtra="1.5dp"
                                     android:textAlignment="center"
                                     android:textColor="@color/black"
                                     android:textSize="15sp"
@@ -145,20 +146,21 @@
                                     android:layout_height="60dp"
                                     android:layout_marginVertical="15dp"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/pregnancy"
+                                    android:src="@drawable/pregnant_woman"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+                                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                                    app:tint="@color/white" />
 
                                 <TextView
                                     android:id="@+id/textView"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="20dp"
-                                    android:fontFamily="@font/poppins_medium"
                                     android:text="@string/Pregnancy"
                                     android:textAlignment="center"
+                                    android:textStyle="bold"
                                     android:textColor="@color/black"
                                     android:textSize="15sp"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -197,76 +199,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="25dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="0.5"
-                        android:orientation="vertical">
-
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/lady6to9"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:cardBackgroundColor="@color/Orange"
-                            app:cardCornerRadius="12dp"
-                            app:cardElevation="0dp"
-                            app:contentPadding="-3dp"
-                            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-                            app:layout_constraintHorizontal_chainStyle="spread_inside"
-                            app:layout_constraintHorizontal_weight="1"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_weight="1"
-                            card_view:cardPreventCornerOverlap="false"
-                            card_view:cardUseCompatPadding="false">
-
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                app:layout_constraintEnd_toEndOf="@+id/imageView9"
-                                app:layout_constraintStart_toEndOf="@+id/imageView9">
-
-
-                                <ImageView
-                                    android:id="@+id/imageView4"
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
-                                    android:layout_marginVertical="15dp"
-                                    android:adjustViewBounds="true"
-                                    android:src="@drawable/six_nine_month"
-                                    android:translationY="-5dp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-                                <TextView
-                                    android:id="@+id/textView4"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="20dp"
-                                    android:fontFamily="@font/poppins_medium"
-                                    android:text="@string/months_6to9"
-                                    android:textAlignment="center"
-                                    android:textColor="@color/black"
-                                    android:textSize="15sp"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="15dp"
                         android:layout_weight="0.5"
-                        android:translationX="-5dp"
+                        android:translationX="7dp"
                         android:orientation="vertical">
 
 
@@ -300,21 +236,21 @@
                                     android:layout_height="70dp"
                                     android:layout_marginVertical="15dp"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/pregnancy"
+                                    android:src="@drawable/zero_to_six_image"
                                     android:translationY="-5dp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                                    app:layout_constraintTop_toBottomOf="@+id/zero_to_six_tv" />
 
                                 <TextView
-                                    android:id="@+id/textView5"
+                                    android:id="@+id/zero_to_six_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="20dp"
-                                    android:fontFamily="@font/poppins_medium"
                                     android:text="@string/months_0to6"
                                     android:textAlignment="center"
+                                    android:textStyle="bold"
                                     android:textColor="@color/black"
                                     android:textSize="15sp"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -326,6 +262,73 @@
                         </com.google.android.material.card.MaterialCardView>
 
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="0.5"
+                        android:translationX="-10dp"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/lady6to9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardBackgroundColor="@color/Orange"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="0dp"
+                            app:contentPadding="-3dp"
+                            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_weight="1"
+                            card_view:cardPreventCornerOverlap="false"
+                            card_view:cardUseCompatPadding="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                                app:layout_constraintStart_toEndOf="@+id/imageView9">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginVertical="15dp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/six_to_nine"
+                                    android:translationY="-5dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/six_to_nine_tv" />
+
+                                <TextView
+                                    android:id="@+id/six_to_nine_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:text="@string/months_6to9"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
 
@@ -350,80 +353,13 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="25dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="0.5"
-                        android:orientation="vertical">
-
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/lady12to24"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:cardBackgroundColor="@color/Orange"
-                            app:cardCornerRadius="12dp"
-                            app:cardElevation="0dp"
-                            app:contentPadding="-3dp"
-                            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-                            app:layout_constraintHorizontal_chainStyle="spread_inside"
-                            app:layout_constraintHorizontal_weight="1"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_weight="1"
-                            card_view:cardPreventCornerOverlap="false"
-                            card_view:cardUseCompatPadding="false">
-
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                app:layout_constraintEnd_toEndOf="@+id/imageView9"
-                                app:layout_constraintStart_toEndOf="@+id/imageView9">
-
-
-                                <ImageView
-                                    android:id="@+id/imageView8"
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
-                                    android:layout_marginVertical="15dp"
-                                    android:adjustViewBounds="true"
-                                    android:src="@drawable/pregnancy"
-                                    android:translationY="-5dp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-                                <TextView
-                                    android:id="@+id/textView7"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="20dp"
-                                    android:fontFamily="@font/poppins_medium"
-                                    android:text="@string/months_12to24"
-                                    android:textAlignment="center"
-                                    android:textColor="@color/black"
-                                    android:textSize="15sp"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                    </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="15dp"
                         android:layout_weight="0.5"
-                        android:translationX="-5dp"
+                        android:translationX="10dp"
                         android:orientation="vertical">
 
 
@@ -457,19 +393,19 @@
                                     android:layout_height="70dp"
                                     android:layout_marginVertical="15dp"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/pregnancy"
+                                    android:src="@drawable/nine_to_twelve"
                                     android:translationY="-5dp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                                    app:layout_constraintTop_toBottomOf="@+id/nine_to_twelve_tv" />
 
                                 <TextView
-                                    android:id="@+id/textView6"
+                                    android:id="@+id/nine_to_twelve_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="20dp"
-                                    android:fontFamily="@font/poppins_medium"
+                                    android:textStyle="bold"
                                     android:text="@string/months_9to12"
                                     android:textAlignment="center"
                                     android:textColor="@color/black"
@@ -483,6 +419,74 @@
                         </com.google.android.material.card.MaterialCardView>
 
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="0.5"
+                        android:translationX="-10dp"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/lady12to24"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardBackgroundColor="@color/Orange"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="0dp"
+                            app:contentPadding="-3dp"
+                            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_weight="1"
+                            card_view:cardPreventCornerOverlap="false"
+                            card_view:cardUseCompatPadding="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                                app:layout_constraintStart_toEndOf="@+id/imageView9">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView8"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginVertical="15dp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/twelve_to_twenty_four"
+                                    android:translationY="-5dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/twelve_to_twenty_four_tv" />
+
+                                <TextView
+                                    android:id="@+id/twelve_to_twenty_four_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:textStyle="bold"
+                                    android:text="@string/months_12to24"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
 
@@ -493,144 +497,4 @@
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_vector"
-    tools:context=".fragment.health.HealthFragment">
 
-    <TextView
-        android:id="@+id/text_health"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="133dp"
-        android:textAlignment="center"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lady12to24" />
-
-    <Button
-        android:id="@+id/general_information"
-        android:layout_width="150dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/background_box"
-        android:text="@string/general_health_info"
-        android:textAlignment="center"
-        android:textColor="@color/Orange"
-        android:textSize="22sp"
-        android:theme="@style/Button.White"
-        app:layout_constraintBottom_toTopOf="@+id/lady_0to6"
-        app:layout_constraintDimensionRatio="h,150:155"
-        app:layout_constraintEnd_toStartOf="@id/maternity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread_inside" />
-
-    <Button
-        android:id="@+id/maternity"
-        android:layout_width="150dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/background_box"
-        android:drawableBottom="@drawable/pregnant_woman"
-        android:text="@string/Pregnancy"
-        android:textAlignment="center"
-        android:textColor="@color/Orange"
-        android:textSize="16sp"
-        android:theme="@style/Button.White"
-        app:layout_constraintBottom_toTopOf="@+id/lady6to9"
-        app:layout_constraintDimensionRatio="h,150:155"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/general_information"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread_inside" />
-
-    <Button
-        android:id="@+id/lady_0to6"
-        android:layout_width="150dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/background_box"
-        android:drawableBottom="@drawable/mum_with_baby"
-        android:text="@string/months_0to6"
-        android:textAlignment="center"
-        android:textColor="@color/Orange"
-        android:textSize="16sp"
-        android:theme="@style/Button.White"
-        app:layout_constraintBottom_toTopOf="@+id/lady9to12"
-        app:layout_constraintDimensionRatio="h,150:155"
-        app:layout_constraintEnd_toStartOf="@id/lady6to9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/general_information" />
-
-    <Button
-        android:id="@+id/lady6to9"
-        android:layout_width="150dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/background_box"
-        android:drawableBottom="@drawable/mum_with_kid"
-        android:text="@string/_6_9_months"
-        android:textAlignment="center"
-        android:textColor="@color/Orange"
-        android:textSize="16sp"
-        android:theme="@style/Button.White"
-        app:layout_constraintBottom_toTopOf="@+id/lady12to24"
-        app:layout_constraintDimensionRatio="h,150:155"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/lady_0to6"
-        app:layout_constraintTop_toBottomOf="@+id/maternity" />
-
-    <Button
-        android:id="@+id/lady9to12"
-        android:layout_width="150dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/background_box"
-        android:drawableBottom="@drawable/mum_with_kid"
-        android:text="@string/_9_12_months"
-        android:textAlignment="center"
-        android:textColor="@color/Orange"
-        android:textSize="16sp"
-        android:theme="@style/Button.White"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="h,150:155"
-        app:layout_constraintEnd_toStartOf="@id/lady12to24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lady_0to6" />
-
-    <Button
-        android:id="@+id/lady12to24"
-        android:layout_width="150dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/background_box"
-        android:drawableBottom="@drawable/mum_with_child"
-        android:text="@string/months_12to24"
-        android:textAlignment="center"
-        android:textColor="@color/Orange"
-        android:textSize="16sp"
-        android:theme="@style/Button.White"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="h,150:155"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/lady9to12"
-        app:layout_constraintTop_toBottomOf="@+id/lady6to9" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>-->

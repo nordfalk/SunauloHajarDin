@@ -11,7 +11,6 @@ import com.bumptech.glide.Glide
 import com.example.sunmadinepal.databinding.NutritionItemLayoutBinding
 import com.example.sunmadinepal.fragment.recipes.InsideRecipes
 import com.example.sunmadinepal.model.RecipesData
-import com.example.sunmadinepal.model.loadImage
 
 class NutritionAdapter : ListAdapter<RecipesData, NutritionAdapter.ViewHolder>(
     diffUtil

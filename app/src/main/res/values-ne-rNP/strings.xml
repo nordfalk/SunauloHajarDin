@@ -16,7 +16,7 @@
     <string name="title_health">स्वास्थ</string>
     <string name="generalhealth">सामान्य जानकारी</string>
     <string name="Pregnancy">गर्भावस्था</string>
-    <string name="months_0to6">० - ६ महिना</string>
+    <string name="months_0to6">०-६ महिना</string>
     <string name="months_6to9">६–९ महिना</string>
     <string name="months_9to12">९–१२ महिना</string>
     <string name="months_12to24">१२ - २४ महिना</string>
@@ -75,7 +75,7 @@
     <string name="my_children">मेरा बालबच्चाहरु</string>
     <string name="daily_health_tips">दैनिक स्वास्थ्य सुझावहरू</string>
     <string name="upcoming_appointments">आगामी नियुक्तिहरू</string>
-    <string name="general_health_ninfo">सामान्य स्वास्थ्य जानकारी</string>
+    <string name="general_health_ninfo">सामान्य स्वास्थ्य\nजानकारी</string>
     <string name="my_appointments">नियुक्ति</string>
     <string name="your_don_t_have_any_appointments">तपाईंको कुनै नियुक्ति छैनन्</string>
     <string name="add_new_appointment">नयाँ थप्नुहोस्</string>
@@ -106,7 +106,7 @@
     <string name="second_question_second_option">ख.होइन</string>
     <string name="second_question_first_option">क.हो</string>
     <string name="third_question">के तपाई गर्भवती हुँदा यो सन्तुलित र स्वस्थ खाना हो?</string>
-    <string name="fourth_question">What should a 4 month old baby be fed?</string>
+    <string name="fourth_question">चार महिनाको बच्चालाई के खुवाउनु पर्छ?</string>
     <string name="fourth_question_first_option">क.आमाको दुध</string>
     <string name="fourth_question_second_option">ख.आमाको दुध र फलफूल</string>
     <string name="fourth_question_third_option">ग.जाउलो र पानी</string>
@@ -144,5 +144,10 @@
     <string name="quiz">प्रश्नोत्तरी</string>
     <string name="finish">समाप्त गर्नुहोस्</string>
     <string name="go_to_next_question">अर्को प्रश्नमा जानुहोस्</string>
+    <string name="go_it">बुझे</string>
+        <string name="your_answered">तपाईंले जवाफ दिनुभयो %s</string>
+    <string name="question_out_of">मध्ये</string>
+    <string name="correctly">प्रश्नहरू सही छ ।</string>
+    <string name="visit_your_doctor_and_text"> आफ्नो चिकित्सक लाइ भेत्नु र आफ्नो  बच्चा को स्वस्थ  र वृद्धि को बारेमा छलफल गर्नु ।</string>
 
 </resources>

@@ -104,7 +104,7 @@
     <string name="quick_links">Quick Links</string>
     <string name="healthy_eating">Healthy Eating</string>
     <string name="water_sanitation"><![CDATA[Water & Sanitation]]></string>
-    <string name="visit_your_doctor_and_discuss_any_concerns_about_your_child_s_health_and_growth_together_with_the_doctor_this_app_only_provides_general_information">Visit your doctor and discuss any concerns about your child’s health and growth together with the doctor. This app only provides general information.</string>
+    <string name="visit_your_doctor_and_text">Visit your doctor and discuss any concerns about your child’s health and growth together with the doctor. This app only provides general information.</string>
     <string name="general_health_ninfo">General Health \nInfo</string>
     <string name="loading_data_from_firebase">Loading Data.....</string>
     <string name="recipe_for_energy">Food items for Energy</string>
@@ -171,5 +171,9 @@
     <string name="read_more">Read More</string>
     <string name="finish">FINISH</string>
     <string name="go_to_next_question">GO TO NEXT QUESTION</string>
+    <string name="go_it">go it</string>
 
+    <string name="your_answered">Your answered %s</string>
+    <string name="question_out_of">Question Out Of</string>
+    <string name="correctly">Correctly</string>
 </resources>

@@ -32,7 +32,7 @@ class AddAppointmentActivity : AppCompatActivity(), Validator.ValidationListener
     lateinit var childName: AppCompatAutoCompleteTextView
 
     @NotEmpty(message = "Hospital Field is required")
-    lateinit var hospitalCenter: AppCompatAutoCompleteTextView
+    lateinit var hospitalCenter: AppCompatEditText
 
     @NotEmpty(message = "Doctor Name Field is required")
     lateinit var doctorName: AppCompatEditText
@@ -82,20 +82,6 @@ class AddAppointmentActivity : AppCompatActivity(), Validator.ValidationListener
                 positionAdapterSubject
             )
         })
-
-
-        val selectHospital = listOf(
-            "Patan Hospital", "Global Hospital", "Kathmandu Hospital Pvt. Ltd.",
-            "Hardik Poly Clinic Pvt. Ltd."
-        )
-        val positionAdapterSubject = ArrayAdapter(
-            this,
-            R.layout.support_simple_spinner_dropdown_item,
-            selectHospital
-        )
-        activityAddAppointmentBinding.healthCenterAutoTv.setAdapter(
-            positionAdapterSubject
-        )
 
         activityAddAppointmentBinding.appointmentDateTimeTv.setOnClickListener {
 

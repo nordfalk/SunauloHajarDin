@@ -1,6 +1,7 @@
 package com.example.sunmadinepal.fragment.home
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.sunmadinepal.databinding.ActivityDailyHealthTipsDetailBinding
@@ -28,8 +29,8 @@ class DailyHealthTipsDetailActivity : AppCompatActivity() {
         }
 
         activityDailyHealthTipsDetailBinding.descriptionHealthTipsTv.text = listData.itemDescription.replace("_n", "\n")
-        Glide.with(this).load(listData.itemImage)
-            .into(activityDailyHealthTipsDetailBinding.healthToolTipsIv)
+        Glide.with(this).load(listData.itemImage).into(activityDailyHealthTipsDetailBinding.healthToolTipsIv)
 
+        Log.d("dailyhealimge",listData.itemImage)
     }
 }
